@@ -1,0 +1,51 @@
+{
+  "id": "3805897",
+  "name": "atguigu2",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "30122718",
+      "name": "车辆定位",
+      "font_class": "cheliangdingwei",
+      "unicode": "e65e",
+      "unicode_decimal": 58974
+    },
+    {
+      "icon_id": "30122720",
+      "name": "单位管理",
+      "font_class": "danweiguanli",
+      "unicode": "e65f",
+      "unicode_decimal": 58975
+    },
+    {
+      "icon_id": "30122721",
+      "name": "行政区划管理",
+      "font_class": "hangzhengquhuaguanli",
+      "unicode": "e660",
+      "unicode_decimal": 58976
+    },
+    {
+      "icon_id": "30122728",
+      "name": "流向管理",
+      "font_class": "liuxiangguanli",
+      "unicode": "e661",
+      "unicode_decimal": 58977
+    },
+    {
+      "icon_id": "30122735",
+      "name": "异常断电警告",
+      "font_class": "yichangduandianjinggao",
+      "unicode": "e662",
+      "unicode_decimal": 58978
+    },
+    {
+      "icon_id": "30122739",
+      "name": "车辆物流",
+      "font_class": "yichangxiehuo",
+      "unicode": "e664",
+      "unicode_decimal": 58980
+    }
+  ]
+}

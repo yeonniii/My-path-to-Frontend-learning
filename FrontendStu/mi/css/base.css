@@ -1,0 +1,10 @@
+/* 公共样式 */
+.clearfix::before,
+.clearfix::after{
+    display:table;
+    clear:both;
+}
+
+body{
+    font:14px
+}

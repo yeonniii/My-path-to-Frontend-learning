@@ -6,5 +6,15 @@
 }
 
 body{
-    font:14px
+    font:14px/1.5 Helvetica Nune;
+    color:#333;
+    min-width:1226px;
+}
+
+/* 设置一个类，用来表示中间容器的宽度 */
+.w{
+    /* 固定容器的宽度 */
+    width: 1225px;
+    /* 设置容器居中 */
+    margin:0 auto;
 }

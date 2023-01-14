@@ -1,1 +1,63 @@
 /* 主页index.html的样式表 */
+
+/* 顶部导航条的容器 */
+.topbar-wrapper{
+    /* 设置宽度全屏 */
+    width: 100%;
+    /* 设置高度和行高 */
+    height:40px;
+    line-height:40px;
+    /* 设置背景颜色 */
+    background-color:#333;
+
+}
+
+/* 设置超链接的颜色 */
+.topbar a{
+    font-size:12px;
+    color:#b0b0b0;
+    display:block;
+}
+
+/* 设置超链接移入的效果 */
+.topbar a:hover{
+    color:#fff;
+}
+
+/* 设置中间分割线 */
+.topbar .line{
+    font-size:12px;
+    color:#424242;
+    margin:0 8px;
+    margin-top:-1px;
+}
+
+/* 设置左侧导航栏 */
+.service,.topbar li{
+    float:left;
+}
+
+/* 设置右侧导航栏 */
+.shop-cart,.user-info{
+    float:right;
+}
+
+.shop-cart{
+    margin-left:26px;
+}
+
+/* 设置购物车的样式 */
+.shop-cart a{
+    width: 120px;
+    background-color:#424242;
+    text-align:center;
+}
+
+.shop-cart:hover a{
+    background-color:#fff;
+    color:#FF6700;
+}
+
+.shop-cart i{
+    margin-right:2px;
+}

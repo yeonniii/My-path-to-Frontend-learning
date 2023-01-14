@@ -5,9 +5,14 @@
     clear:both;
 }
 
-body{
-    font:14px/1.5 Helvetica Nune;
+/* 去除a的下划线 */
+a{
+    text-decoration:none;
     color:#333;
+}
+
+body{
+    font:14px/1.5 Helvetica Nune,Helvetica,Arial;
     min-width:1226px;
 }
 

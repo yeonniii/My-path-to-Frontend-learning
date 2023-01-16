@@ -37,6 +37,63 @@
     float:left;
 }
 
+.app{
+    position:relative;
+}
+
+/* 设置APP下的小三角 */
+.app-wrapper:hover .app::after{
+    display:none;
+    content:'';
+    /* 设置绝对定位 */
+    position:absolute;
+    width: 0;
+    height: 0;
+    /* 设置完绝对定位后就会脱离文档流变成块元素，所以下面这行写不写都行 */
+    display:block;
+    /* 色织四个方向的边框 */
+    border:8px solid transparent;
+    /* 去除上边框 */
+    border-top:none;
+    /* 单独设置下边框的颜色 */
+    border-bottom-color:#fff;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:auto;
+}
+
+.app-wrapper:hover>.app .qrcode{
+    display:block;
+} 
+
+/* 设置下载APP的下拉 */
+.app .qrcode{
+    display:none;
+    position:absolute;
+    left:-40px;
+    width: 124px;
+    height: 148px;
+    /* 父元素的行高为40px，作为后代元素继承父元素的行高，占40px 需重置行高 */
+    line-height:1;
+    text-align:center;
+    background-color:#fff;
+    box-shadow:0 0 10px rgba(0,0,0,.3)
+}
+
+/* 设置二维码图片 */
+.app .qrcode img{
+    width: 90px;
+    margin:17px;
+    margin-bottom:10px;
+}
+
+/* 设置二维码中的文字 */
+.app .qrcode span{
+    font-size:14px;
+    color:#000;
+}
+
 /* 设置右侧导航栏 */
 .shop-cart,.user-info{
     float:right;

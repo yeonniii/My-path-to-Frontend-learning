@@ -64,21 +64,28 @@
 }
 
 .app-wrapper:hover>.app .qrcode{
-    display:block;
+    /* display:block; */
+    height:148px;
 } 
 
 /* 设置下载APP的下拉 */
 .app .qrcode{
-    display:none;
+    /* display:none; */
     position:absolute;
     left:-40px;
     width: 124px;
-    height: 148px;
+    /* height: 148px; */
+    height:0;
+    overflow:hidden;
     /* 父元素的行高为40px，作为后代元素继承父元素的行高，占40px 需重置行高 */
     line-height:1;
     text-align:center;
     background-color:#fff;
-    box-shadow:0 0 10px rgba(0,0,0,.3)
+    box-shadow:0 0 10px rgba(0,0,0,.3);
+
+    /* transition: 用于为样式设置过渡效果  */
+    transition:height 0.3s;
+    
 }
 
 /* 设置二维码图片 */

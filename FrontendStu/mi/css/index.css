@@ -125,3 +125,48 @@
 .shop-cart i{
     margin-right:2px;
 }
+
+/* 设置中间的header */
+.header{
+    height: 100px;
+    
+}
+
+/* 设置logo的h1 */
+.header .logo{
+    float:left;
+    margin-top:22px;
+    width: 55px;
+    height: 55px;
+    position:relative;
+    overflow:hidden;
+    /* 隐藏logo中的文字 */
+    text-indent:-9999px;
+}
+
+/* 统一设置logo的超链接 */
+.header .logo a{
+    position:absolute;
+    width: 55px;
+    height: 55px;
+    left:0;
+    background-color:#ff6700;
+    background-image:url(../img/mi-logo.png);
+    background-position:center;
+    transition:left 0.3s;
+}
+
+/* 设置home图标 */
+.header .logo .home{
+    background-image:url(../img/mi-home.png);
+    left:-55px;
+}
+
+/* 设置鼠标移入以后两个图标的位置 */
+.header .logo:hover .mi{
+    left:55px;
+}
+
+.header .logo:hover .home{
+    left:0;
+}

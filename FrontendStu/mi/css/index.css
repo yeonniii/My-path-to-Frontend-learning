@@ -156,7 +156,7 @@
     transition:left 0.3s;
 }
 
-/* 设置home图标 */
+/* 设置home图片 */
 .header .logo .home{
     background-image:url(../img/mi-home.png);
     left:-55px;
@@ -166,7 +166,22 @@
 .header .logo:hover .mi{
     left:55px;
 }
-
 .header .logo:hover .home{
     left:0;
+}
+
+/* 设置中间的导航条 */
+.header .nav-wrapper{
+    float:left;
+}
+
+/* 设置导航条 */
+.header .nav{
+    width:850px;
+    background-color:
+}
+
+/* 设置导航条中的li */
+.nav-wrapper li{
+    float:left;
 }

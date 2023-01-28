@@ -126,10 +126,15 @@
     margin-right:2px;
 }
 
+.header-wrapper{
+    /* background-color:red; */
+    position:relative;
+}
+
 /* 设置中间的header */
 .header{
     height: 100px;
-    
+    /* background-color:#ff0; */
 }
 
 /* 设置logo的h1 */
@@ -200,5 +205,27 @@
 
 /* 隐藏全部商品 */
 .all-goods{
-    display:hidden;
+    visibility:hidden;
 }
+
+.nav .goods-info{
+    /* height:228px; */
+    height:0;
+    overflow:hidden;
+    width:100%;
+    background-color:#fff;
+    position:absolute;
+    top:100px;
+    left:0;
+    transition:height 0.3s;
+    z-index:9999;
+}
+
+/* .nav li:not(:first-of-type):not(:nth-child(10)):not(:nth-child(9)):hover ~ .goods-info, */
+.nav .show-goods:hover ~ .goods-info,
+.goods-info:hover{
+    height:228px;
+    border-top:1px solid rgb(224,224,224);
+    box-shadow:0 5px 3px rgba(0,0,0,.2);
+}
+

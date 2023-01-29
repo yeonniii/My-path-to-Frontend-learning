@@ -189,8 +189,44 @@
 }
 
 /* 设置导航条中的li */
-.nav-wrapper li{
+.nav > li{
     float:left;
+}
+
+.all-goods-wrapper{
+    position:relative;
+}
+
+/* 设置左侧导航条的样式 */
+.left-menu{
+    width: 234px;
+    height: 420px;
+    padding:20px 0;
+    background-color:rgba(0,0,0,.6);
+    position:absolute;
+    z-index:999;
+    left:-120px;
+    line-height:1;
+}
+
+ul.left-menu li a{
+    display:block;
+    height: 42px;
+    line-height:42px;
+    color:white;
+    margin-right:0;
+    padding:0 30px;
+    font-size:14px;
+}
+
+ul.left-menu li a:hover{
+    color:white;
+    background-color:#ff6700;
+}
+
+.left-menu a i{
+    float:right;
+    line-height:42px;
 }
 
 .nav-wrapper li a{

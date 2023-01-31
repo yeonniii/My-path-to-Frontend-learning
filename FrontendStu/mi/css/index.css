@@ -376,3 +376,27 @@ ul.left-menu li a:hover{
 .prev-next .next:hover{
     background-position:-42px 0;
 }
+
+/* 设置回到顶部的元素 */
+.back-top{
+    width: 26px;
+    height: 206px;
+    background-color:orange;
+    /* 开启固定定位 */
+    position:fixed;
+
+    bottom:60px;
+    right:50%; /* 将right值设置为视口宽度的50% */
+
+    margin-right:-639px;
+
+    /* 
+        布局的等式
+            left + margin-left + width +margin-right +right = 视口的宽度（包含块的宽度）
+
+            auto + 0 + 26 + 0 + 60 = 视口宽度
+
+            auto + 0 + 26 + -639 +50% =视口宽度
+    */
+
+}

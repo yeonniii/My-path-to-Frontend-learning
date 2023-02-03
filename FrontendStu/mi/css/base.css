@@ -12,14 +12,15 @@ a{
 }
 
 body{
-    font:14px/1.5 Helvetica Nune,Helvetica,Arial;
+    font:14px/1.5 Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi;
+    color:#333;
     min-width:1226px;
 }
 
 /* 设置一个类，用来表示中间容器的宽度 */
 .w{
     /* 固定容器的宽度 */
-    width: 1225px;
+    width: 1226px;
     /* 设置容器居中 */
     margin:0 auto;
 }

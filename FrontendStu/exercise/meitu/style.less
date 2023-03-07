@@ -1,3 +1,12 @@
+a{
+    text-decoration:none;
+    color:#fff;
+
+    &:hover{
+        color:rgb(197,196,196)
+    }
+}
+
 //导航条的外部容器
 .top-bar{
     height: 48px;
@@ -10,6 +19,50 @@
 
 //设置左侧导航
 .left-menu{
+    &:active{
+        //显示隐藏的菜单
+        .nav{
+            display:block;
+        }
+    }
+    // position:relative;
+
+    //设置菜单
+    .nav{
+        display:none;
+        position:absolute;
+        top:48px;
+        left:0;
+        bottom:0;
+        right:0;
+        //设置背景颜色
+        background-color: #000;
+        padding-top: 60px;
+
+        li{
+            width: 80%;
+            margin:0 auto;
+            border-bottom:1px solid #757474;
+
+            a{
+                display:block;
+                line-height:44px;
+                font-size: 14px;
+                
+            }
+
+            &:last-child a{
+                display:inline-block;
+                margin-right: 6px;
+            }
+
+            span{
+                color:#fff;
+                font-size: 14px;
+            }
+        }
+    }
+
     // 图标
     .menu-icon{
         width: 18px;
@@ -41,7 +94,8 @@
             top: 30px;
         }
 
-        &:hover{
+        //鼠标移入以后的效果，正常项目时，效果需要通过js来实现
+        &:active{
             li:nth-child(1){
                 //向下旋转
                 transform:rotateZ(40deg);

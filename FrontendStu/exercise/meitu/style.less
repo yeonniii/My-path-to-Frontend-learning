@@ -1,0 +1,61 @@
+//导航条的外部容器
+.top-bar{
+    height: 48px;
+    padding:0 14px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background-color: #000;
+}
+
+//设置左侧导航
+.left-menu{
+    // 图标
+    .menu-icon{
+        width: 18px;
+        height: 48px;
+        position:relative;
+
+        //导航的线
+        li{
+            width: 18px;
+            height: 1px;
+            background-color: #fff;
+            position:absolute;
+
+            // 修改变形的原点
+            transform-origin:left center;
+
+            transition:0.5s;
+        }
+
+        li:nth-child(1){
+            top:18px;
+        }
+
+        li:nth-child(2){
+            top:24px;
+        }
+
+        li:nth-child(3){
+            top: 30px;
+        }
+
+        &:hover{
+            li:nth-child(1){
+                //向下旋转
+                transform:rotateZ(40deg);
+            }
+    
+            li:nth-child(2){
+                //隐藏 用visibility:hidden;也可以
+                opacity:0;
+            }
+    
+            li:nth-child(3){
+                // 向上旋转
+                transform:rotateZ(-40deg);
+            }
+        }
+    }
+}

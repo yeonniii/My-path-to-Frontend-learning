@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>练习-循环语句1</title>
+    <script>
+
+        /* 
+            练习1：
+                求100以内所有3的倍数（求他们的个数和总和）
+        */
+
+        //我的方法
+        /* let num = 3;
+        let i = 1;
+        let sum = 0;
+
+        for(;num >= 1 && num <= 100;i++){
+
+            sum += num
+            console.log(`${num}是第${i}个3的倍数，目前总和是${sum}`);
+            num += 3
+            
+        }
+
+        console.log(`100以内3的倍数有${i-1}个，他们的总和是${sum}`); */
+
+        //老师的方法1
+        /* let count = 0 //计数器
+        let result = 0 //用来存储计算结果（累加结果）
+
+        for(let i = 1;i <= 100;i++){
+            if(i%3 === 0){
+                count++
+                result += i
+            }
+        }
+        console.log(`3的倍数一共有${count}个，总和为${result}`); */
+
+
+        //老师的方法2
+        /* for(let i = 3 ; i <= 100 ; i += 3){
+            count++
+            result += i
+        }
+
+        console.log(`3的倍数一共有${count}个，总和为${result}`); */
+
+        
+
+       
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

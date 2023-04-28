@@ -99,7 +99,7 @@
 
         <div class="prev-next">
             <a id="prev" href="javascript:;"><</a>
-            <a id="next" href="javascript:;">></a>
+                    <a id="next" href="javascript:;">></a>
         </div>
 
     </div>
@@ -111,26 +111,40 @@
             问题2：如何控制图片自动切换的关闭和开启
         */
 
-        /* 
-            自动切换图片
-        */
+        /* 自动切换图片 */
+        const toggleChange = (function () {
+            let timer = null
 
-        setTimeout(function auto() {
+            return () => {
 
-            // 获取当前显示的图片
-            const current = document.querySelector(".img-list .current")
+                // 判断timer是否是null
+                if (timer === null) {
+                    timer = setTimeout(function auto() {
 
-            // 获取下一个图片
-            const next = current.nextElementSibling || 
-            document.getElementsByTagName("li")[0]
+                        changeImg("next")
+                        timer = setTimeout(auto, 1000)
 
-            // 切换显示状态
-            current.classList.remove("current")
-            next.classList.add("current")
+                    }, 1000)
+                } else {
+                    clearTimeout(timer)
+                    timer = null
+                }
+            }
+        })()
 
-            setTimeout(auto, 1000)
 
-        }, 1000)
+        toggleChange()
+
+        // 获取outer
+        const outer = document.getElementsByClassName("outer")[0]
+        outer.onmouseenter = () => {
+            toggleChange()
+        }
+
+        outer.onmouseleave = () => {
+            toggleChange()
+        }
+
 
         /* 
             点击按钮切换图片
@@ -140,29 +154,39 @@
         const next = document.getElementById("next")
 
         prev.onclick = () => {
-            // 获取当前显示的图片
-            const current = document.querySelector(".img-list .current")
-
-            // 获取下一个图片
-            const next = current.previousElementSibling || 
-            document.querySelector("li:last-child")
-
-            // 切换显示状态
-            current.classList.remove("current")
-            next.classList.add("current")
+            changeImg("prev")
         }
 
         next.onclick = () => {
+            changeImg("next")
+        }
+
+
+        /* 
+            changeImg 用来切换图片
+                参数：
+                    dir 切换图片的方向
+                        next
+                        prev
+        */
+        function changeImg(dir) {
             // 获取当前显示的图片
             const current = document.querySelector(".img-list .current")
 
             // 获取下一个图片
-            const next = current.nextElementSibling || 
-            document.getElementsByTagName("li")[0]
+            let next
+            if (dir === "next") {
+                next = current.nextElementSibling ||
+                    document.getElementsByTagName("li")[0]
+            } else if (dir === "prev") {
+                next = current.previousElementSibling ||
+                    document.querySelector("li:last-child")
+            }
 
             // 切换显示状态
             current.classList.remove("current")
             next.classList.add("current")
+
         }
 
     </script>

@@ -61,6 +61,8 @@
         <!-- 阻止事件冒泡（常用） -->
         <div class="demo1" @click="showInfo">
             <button @click.stop="showInfo">点我提示信息</button>
+            <!-- 修饰符可以连续写 -->
+            <!-- <a href="http://www.atguigu.com" @click.stop="showInfo">点我提示信息</a> -->
         </div>
 
         <!-- 是兼职触发一次（常用） -->

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul,
+      li {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      a:hover {
+        color: #c02822;
+      }
+
+      /* .router-link-active {
+        padding: 10px;
+        background-color: #ccc;
+        border-radius: 5px;
+        color: white;
+        text-decoration: none;
+    } */
+    .box {
+        width: 300px;
+        height: 300px;
+        background-color: orange;
+    }
+    </style>
+    <!-- 1.导包 -->
+    <script src="./js/vue_2.5.22.js"></script>
+    <script src="./js/vue-router_3.0.2.js"></script>
+  </head>
+  <body>
+    <div id="app">
+        
+        <!-- 6.路由切换方式 -->
+        <router-link to="/login?id=101">登录</router-link>
+        <!-- <router-link to="/register">注册</router-link> -->
+        <router-link :to="{name :'reg',params: {id: 1 }}">注册</router-link
+          <!-- 5.定义路由占位符 -->
+          <router-view></router-view>
+    </div>
+
+   <template id="login">
+        <div class="box">
+            <h1>请选择你的登录方式</h1>
+            <!-- ？传递参数 -->
+            <p>传递的参数id是 {{ $route.query.id }}</p>
+            <router-link to="/phone">手机号登录</router-link>
+            <router-link to="/erweima/100">扫码登录</router-link>
+            <router-view></router-view>
+        </div>
+   </template> 
+
+   <template id="rigister">
+    <div class="box">
+        <h3>{{ id }}</h3>
+        <h1>注册</h1>
+        <button @click="goBack">返回</button>
+        <button @click="goLogin(123)">我要去登录</button>
+    </div>
+</template> 
+    <script>
+    // 2.定义路由组件
+   const phone = {
+    template:`<div>
+        <h3>手机号登录</h3>
+        <button @click=goRegister>去注册</button>
+        </div>`,
+        methods: {
+            goRegister () {
+                this.$router.push({name:"reg",params:{id:123}})
+            }
+        }
+   }
+
+   const erweima = {
+    template:`<h3>扫码登录
+        {{ id }}
+        </h3>`,
+        props: ['id']
+   }
+    const login = {
+        template:`#login`
+    }
+
+    const register = {
+        template:`#rigister`,
+        props:["id"],
+        methods: {
+            goLogin (id) {
+                //  ?形式传递参数
+                // this.$router.push("/login?id="+id)
+                // resuful形式传递参数
+                this.$router.push("/erweima/"+id)
+            },
+            goBack () {
+                this.$router.go(-1)
+            }
+        }
+    }
+    // 3.构建路由管理器
+   const router =   new VueRouter({
+        // url 与资源的对应规则
+        routes : [
+            {
+                path:"/",
+                // 重定向
+                redirect : "/register",
+            
+            },
+            // {
+            //     path:"/phone",
+            //     component : phone
+            // },
+
+            {
+                path:"/login",
+                // redirect:"/phone",
+                component : login,
+                // 嵌套路由
+                children: [
+                     {
+                        path:"/phone",
+                        component : phone
+                     },
+                     {
+                        path:"/erweima/:id",
+                        component : erweima,
+                        props : true
+                     },
+                ]
+            },
+            {
+                path:"/register/:id",
+                component : register,
+                name:"reg",
+                props:true
+            },
+           
+           
+        ]
+     })
+    
+      
+     // 1.声明式导航  a route-link
+    //  2.编程式导航  通过js的形式进行页面切换
+      new Vue({
+        el: "#app",
+        data: {},
+        methods: {},
+        computed: {},
+        mounted() {},
+        // 4.将路由管理器挂载到vue身上
+        router :router
+      });
+    </script>
+  </body>
+</html>

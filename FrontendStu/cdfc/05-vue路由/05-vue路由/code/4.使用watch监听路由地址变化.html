@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul,
+      li {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      a:hover {
+        color: #c02822;
+      }
+
+      /* .router-link-active {
+        padding: 10px;
+        background-color: #ccc;
+        border-radius: 5px;
+        color: white;
+        text-decoration: none;
+    } */
+    </style>
+    <!-- 1.导包 -->
+    <script src="./js/vue_2.5.22.js"></script>
+    <script src="./js/vue-router_3.0.2.js"></script>
+  </head>
+  <body>
+    <div id="app">
+        
+        <!-- 6.路由切换方式 -->
+        <router-link to="/login">登录</router-link>
+        <router-link to="/register">注册</router-link>
+          <!-- 5.定义路由占位符 -->
+          <router-view></router-view>
+    </div>
+    <script>
+    // 2.定义路由组件
+    const login = {
+        template:`<h1>登录</h1>`
+    }
+
+    const register = {
+        template:`<h1>注册</h1>`
+    }
+    // 3.构建路由管理器
+   const router =   new VueRouter({
+        // url 与资源的对应规则
+        routes : [
+            {
+                path:"/",
+                // 重定向
+                redirect : "/register",
+            
+            },
+
+            {
+                path:"/login",
+                component : login
+            },
+            {
+                path:"/register",
+                component : register
+            },
+        ]
+     })
+
+      new Vue({
+        el: "#app",
+        data: {},
+        methods: {},
+        computed: {},
+        mounted() {},
+        // 4.将路由管理器挂载到vue身上
+        router :router,
+        watch : {
+           '$route.path' (newVal) {
+            if (newVal == "/login") {
+                alert("欢迎回来")
+            }
+           }
+        }
+      });
+    </script>
+  </body>
+</html>

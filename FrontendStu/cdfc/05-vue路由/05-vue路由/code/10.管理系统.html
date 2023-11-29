@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>基于vue-router的案例</title>
+    <style type="text/css">
+      html,
+      body,
+      #app {
+        margin: 0;
+        padding: 0px;
+        height: 100%;
+      }
+      .header {
+        height: 50px;
+        background-color: #545c64;
+        line-height: 50px;
+        text-align: center;
+        font-size: 24px;
+        color: #fff;
+      }
+      .footer {
+        height: 40px;
+        line-height: 40px;
+        background-color: #888;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        color: #fff;
+      }
+      .main {
+        display: flex;
+        position: absolute;
+        top: 50px;
+        bottom: 40px;
+        width: 100%;
+      }
+      .content {
+        flex: 1;
+        text-align: center;
+        height: 100%;
+      }
+      .left {
+        flex: 0 0 20%;
+        background-color: #545c64;
+      }
+      .left a {
+        color: white;
+        text-decoration: none;
+      }
+      .right {
+        margin: 5px;
+      }
+      .btns {
+        width: 100%;
+        height: 35px;
+        line-height: 35px;
+        background-color: #f5f5f5;
+        text-align: left;
+        padding-left: 10px;
+        box-sizing: border-box;
+      }
+      button {
+        height: 30px;
+        background-color: #ecf5ff;
+        border: 1px solid lightskyblue;
+        font-size: 12px;
+        padding: 0 20px;
+      }
+      .main-content {
+        margin-top: 10px;
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      ul li {
+        height: 45px;
+        line-height: 45px;
+        background-color: #a0a0a0;
+        color: #fff;
+        cursor: pointer;
+        border-bottom: 1px solid #fff;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      td,
+      th {
+        border: 1px solid #eee;
+        line-height: 35px;
+        font-size: 12px;
+      }
+
+      th {
+        background-color: #ddd;
+      }
+    </style>
+    <script src="./js/vue_2.5.22.js"></script>
+    <script src="./js/vue-router_3.0.2.js"></script>
+    <script src="./js/axios.js"></script>
+    
+  </head>
+  <body>
+      <div id=app> 
+        <router-view></router-view>
+      </div>
+  </body>
+ 
+
+  <template id="temp">
+    <div>
+      <button @click=addDept>添加部门</button>
+      <table>
+         <thead>
+          <caption>部门管理</caption>
+            <tr>
+               <td>序号</td>
+               <td>部门名称</td>
+               <td>部门负责人</td>
+               <td>详情</td>
+            </tr>
+         </thead>
+         <tbody>
+           <tr v-for="(item,index) in  DeptList" :key="item.id">
+             <td>{{ index + 1 }}</td>
+             <td>{{ item.name }}</td>
+             <td>{{ item.principal }}</td>
+             <td><a href="" @click.prevent="goDeptInfo(item.id)">详情</a></td>
+           </tr>
+         </tbody>
+      </table>
+    </div>
+  </template>
+
+
+  <script>
+    // App组件
+    const App = {
+      template: `
+      <div>
+      <!-- 头部区域 -->
+      <header class="header">管理系统</header>
+      <!-- 中间主体区域 -->
+      <div class="main">
+        <!-- 左侧菜单栏 -->
+        <div class="content left">
+          <ul>
+             <router-link to="/dept"> <li>部门管理</li> </router-link>
+             <router-link to="/access"> <li>权限管理</li> </router-link>
+             <router-link to="/good"> <li>商品管理</li> </router-link>
+             <router-link to="/order"> <li>订单管理</li> </router-link>
+             <router-link to="/system"> <li>系统设置</li> </router-link>
+          </ul>
+        </div>
+        <!-- 右侧内容区域 -->
+        <div class="content right"><div class="main-content">
+          <router-view></router-view>
+          </div></div>
+      </div>
+      <!-- 尾部区域 -->
+      <footer class="footer">版权信息</footer>
+    </div>`
+    }
+
+    // 侧边栏切换对应组件 5个
+    const Dept = {
+      template:"#temp",
+      data () {
+        return {
+          // 部门列表
+          DeptList:[],
+          // 部门总数
+          total: 0,
+        //   deptInfo : {
+        //   "name": "",
+        //   "principal": "",
+        //   "principal_tel": "",
+        //   "tel": ""
+        // }
+        }
+      },
+
+      methods: {
+        // 获取部门列表数据
+        async getDeptList() {
+          const { data : { data  } } = await axios.get("/deps")
+          // console.log(data.rows);
+          // console.log(data.total);
+          this.DeptList = data.rows
+          this.total = data.total
+          },
+          // 添加部门功能
+          addDept () {
+
+          },
+          // 跳转到部门详情
+          goDeptInfo (id) {
+             console.log(id);
+             this.$router.push("/deptInfo/"+id)
+          }
+      },
+      mounted () {
+        axios.defaults.baseURL = "http://git.coding-future.com:19003"
+        this.getDeptList()
+      }
+    }
+    const Access = {
+      template:"`<h3>权限管理</h3>`"
+    }
+    const Good = {
+      template:"`<h3>商品管理</h3>`"
+    }
+    const Order = {
+      template:"`<h3>订单管理</h3>`"
+    }
+    const System = {
+      template:"`<h3>系统设置</h3>`"
+    }
+
+    const DeptInfo = {
+      template:`<div>
+          <h3>部门详情 ----{{ id }}</h3>
+          <form >
+        <label> 部门名称：
+          <input type="text" v-model="deptInfo.name">
+        </label>
+        <label> 部门电话：
+          <input type="text" v-model=deptInfo.tel>
+        </label>
+        <label> 部门负责人：
+          <input type="text" v-model=deptInfo.principal>
+        </label>
+        <label> 部门负责人电话：
+          <input type="text" v-model=deptInfo.principal_tel>
+        </label>
+   
+  </form>
+
+        </div>`,
+        props:["id"],
+        data () {
+          return {
+            deptInfo : {
+              "name": "",
+              "principal": "",
+              "principal_tel": "",
+              "tel": ""
+        }
+             
+          }
+        },
+        methods: {
+          async getDeptInfo () {
+            const result = await  axios.get(`/dep/${this.id}`)
+          
+            this.deptInfo = result.data.data
+          }
+        },
+        mounted () {
+          this.getDeptInfo()
+        }
+    }
+
+
+    const router = new VueRouter({
+        routes: [  
+           {
+            path: "/",
+            redirect: "/dept"
+           },
+           {
+            path: "/app",
+            component: App,
+            children : [
+                {
+                path: "/dept",
+                component: Dept
+               },
+               {
+                path: "/access",
+                component: Access
+               },
+               {
+                path: "/good",
+                component: Good
+               },
+               {
+                path: "/order",
+                component: Order
+               },
+               {
+                path: "/system",
+                component: System
+               },
+               {
+                path:"/deptInfo/:id",
+                component: DeptInfo,
+                props: true
+                }
+            ]
+           },
+          
+           
+        ]
+    })
+
+     new Vue({
+      el: "#app",
+      data : {},
+      methods: {
+         
+      },
+      router,
+     
+     
+     })
+  </script>
+</html>

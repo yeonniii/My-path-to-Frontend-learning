@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["system"],{f97d:function(n,t,s){"use strict";s.r(t);var e=function(){var n=this;n._self._c;return n._m(0)},u=[function(){var n=this,t=n._self._c;return t("div",[t("h3",[n._v("系统管理")])])}],r={},c=r,i=s("2877"),l=Object(i["a"])(c,e,u,!1,null,null,null);t["default"]=l.exports}}]);

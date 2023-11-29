@@ -1,0 +1,24 @@
+{
+    "name" : "张三",
+    "age" : null,
+    "married": false,
+    "gender" : "男",
+    "pet" : ["旺财","花花"],
+    "friend": {
+        "name": "小红",
+        "age" :17,
+        "gender": "girl"
+    }
+}
+// // json 不要写注释 有问题
+// json这种数据结构 有2种形式  看最外层是一个数组还是一个对象
+// 第一种数对象形式
+// 第二种数数组形式
+//对象
+// 字符串
+// 数字
+// 布尔值
+// null
+// 数组
+
+// 不支持undefined 和function 

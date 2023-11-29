@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>初识Ajax开发</title>
+    <script type="text/javascript">
+      window.onload = function () {
+        var btn = document.getElementById('btn');
+        btn.onclick = function () {
+          // 1.创建一个XMLHttpRequest 对象
+          var xhr = null;
+          if (window.XMLHttpRequest) {
+            xhr = new XMLHttpRequest(); //标准
+          } else {
+            xhr = new ActiveXObject('Microsoft'); //IE6
+          }
+          console.log(xhr);
+          // 2.准备发送  发送/请求方式 url  同步异步标识位 ture表示异步，false同步
+        
+         xhr.open('get', 'http://localhost:3007/request01', true);
+          // 3.发送   括号里面是参数，但是没有参数，我们就可以个null
+          xhr.send(null);
+          // 4.得到后端返回数据以后，我们怎么处理
+          xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4) {
+              if (xhr.status == 200) {
+                var data = xhr.responseText;
+                var info = document.getElementById('info');
+                info.innerHTML = data;
+              }
+            }
+          };
+        };
+      };
+    </script>
+  </head>
+
+  <body>
+    <input type="button" value="发送" id="btn" />
+    <div id="info"></div>
+  </body>
+</html>

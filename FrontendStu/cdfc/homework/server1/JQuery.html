@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            position: absolute;
+            left: 50%;
+            top:50%;
+            transform: translate(-50%,-50%);
+            display: none;
+        }
+    </style>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.js"></script>
+</head>
+<body>
+    <img src="loading.gif" alt="">
+    <p>
+       账号： <input type="text" id="username">
+    </p>
+    <p>
+        密码： <input type="text" id="password">
+     </p>
+
+     <button id="btn">登录</button>
+  
+    <div>
+        <h3>欢迎你 ： <span id="data"></span></h3>
+    </div>
+    <script>
+        var username = document.getElementById("username")
+        var password = document.getElementById("password")
+        var data = document.getElementById("data")
+        var btn = document.getElementById("btn")
+
+        btn.onclick = function () {
+        
+            //  console.log(username.value +":"  +password.value);
+
+
+             $.ajax({
+            // 当前这次请求的资源路径
+            url:"http://localhost:3007/request13-2",
+            // 发送的是post请求
+            type:"post",
+            // 表示发送后端的数据
+            data : {
+                username :username.value,
+                password :password.value
+            },
+            // 后端返回json 前端可以自行解析
+            dataType: "json",
+            // 在请求发送之前
+            beforeSend : function () {
+                $("img").css("display","block")
+            },
+            // 前后端交互成功，后端返回的数据
+            success : function (result) {
+               console.log(result);
+               data.innerHTML = `<h3>${result.username}</h3>`
+             
+            },
+            // 这次交互，如果中间出现问题，会自动的触发的回调函数
+            error : function () {
+              alert("发生了未知错误，请联系管理员！")
+        
+            },
+            // 无论请求成功，还是失败时，都是一定会触发的
+            complete : function () {
+                  $("img").css("display","none")
+            }
+        })
+        }
+
+      
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<booklist>
+    <book>
+        <name>三国演义</name>
+        <author>罗贯中</author>
+        <desc>一个杀伐纷争的年代</desc>
+    </book>
+    <book>
+        <name>水浒传</name>
+        <author>施耐庵</author>
+        <desc>108条好汉的故事</desc>
+    </book>
+    <book>
+        <name>红楼梦</name>
+        <author>曹雪芹</author>
+        <desc>一个封建王朝的缩影</desc>
+    </book>
+    <book>
+        <name>西游记</name>
+        <author>吴承恩</author>
+        <desc>佛教与道教的斗争</desc>
+    </book>
+</booklist>
+<!--    获取XML中的内容我们通过操作DOM元素的方式，因为xML文件中的代码，我们可以将他视为一棵DOM树
+        解析方法类似于
+         xhr.onload = function () {
+        var data = xhr.responseXML;
+        var bookList = data.getElementsByTagName("booklist")[0]
+        var bookName = bookList.children[0].children[0].innerHTML
+        var bookAuthor = bookList.children[0].children[1].innerHTML
+        var bookDesc = bookList.children[0].children[2].innerHTML
+        var info = document.getElementById("info")
+        console.log(bookDesc)
+        info.innerText = "书名：" + bookName + "作者：" + bookAuthor + "描述" + bookDes
+      }
+      -->

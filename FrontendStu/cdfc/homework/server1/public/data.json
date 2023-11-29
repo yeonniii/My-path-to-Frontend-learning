@@ -1,0 +1,16 @@
+{
+  "name": "zhangsan",
+  "age": 18,
+  "lover": [
+    "singing",
+    "dancing",
+    "swiming"
+  ],
+  "friend": {
+    "name": "lisi",
+    "age": "20",
+    "friend": {
+      "name": "王五"
+    }
+  }
+}

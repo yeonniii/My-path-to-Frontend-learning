@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图书查找</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+
+<body>
+
+    <h1>图书查找</h1>
+
+    <label for="bookCode">图书代码:</label>
+    <input type="text" id="bookCode" placeholder="请输入图书代码...">
+    <button onclick="searchBook()">查找</button>
+
+    <div id="bookInfo"></div>
+
+    <script>
+        function searchBook() {
+            var bookCodeInput = $("#bookCode");
+            var bookInfo = $("#bookInfo");
+
+            $.ajax({
+
+                // 当前这次请求的资源路径
+                url: "http://localhost:3333/get/book",
+
+                // 发送的是get请求
+                type: "get",
+
+                // 表示发送后端的数据
+                data: { code: bookCodeInput.val() },
+
+                success: function (result) {
+                    console.log(result)
+                    if (result.includes("error")) {
+                        // 未找到书籍
+                        bookInfo.html("<p style='color: red;'>未找到该书籍</p>");
+                    } else {
+                        // 找到书籍
+                        var bookData = JSON.parse(result);
+                        var bookName = bookData.bookname;
+                        var bookAuthor = bookData.author;
+                        var bookDesc = bookData.desc;
+
+                        bookInfo.html(`
+                            <h2>书籍信息</h2>
+                            <p>书名：${bookName}</p>
+                            <p>作者：${bookAuthor}</p>
+                            <p>描述：${bookDesc}</p>
+                        `);
+                    }
+                },
+                error: function () {
+                    alert("发生未知错误，请稍后再试。");
+                }
+
+            });
+        }
+    </script>
+
+</body>
+
+</html>

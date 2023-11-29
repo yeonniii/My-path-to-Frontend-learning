@@ -1,0 +1,451 @@
+/* 右边栏 */
+
+/* 共同控制的部分 */
+.morefood,
+.moreEnt,
+.moreMarry,
+.moreMovie,
+.moreBeauty,
+.moreHotel,
+.moreBaby,
+.moreTravel,
+.moreFitness,
+.moreShop,
+.moreHouse,
+.moreStudy,
+.moreLife,
+.moreHealth,
+.moreCar,
+.morePet
+{
+    width: 400px;
+    height: 497px;
+    background-color: #ffffff;
+    position:absolute;
+    top:0px;
+    left:210px;
+    z-index: 999;
+    color:#777777;
+    border:2px solid #f76004 ;
+    padding:10px;
+    display:none;
+}
+
+.morefood .title,
+.moreEnt .title,
+.moreMarry .title,
+.moreMovie .title,
+.moreBeauty .title,
+.moreHotel .title,
+.moreBaby .title,
+.moreTravel .title,
+.moreFitness .title,
+.moreShop .title,
+.moreHouse .title,
+.moreStudy .title,
+.moreLife .title,
+.moreHealth .title,
+.moreCar .title,
+.morePet .title
+{
+    height: 40px;
+    width: 90%;
+    margin:0 auto;
+    line-height: 40px;
+    border-bottom:1px solid #f4f4f4;
+}
+
+.morefood .title .topic,
+.moreEnt .title .topic,
+.moreMarry .title .topic,
+.moreMovie .title .topic,
+.moreBeauty .title .topic,
+.moreHotel .title .topic,
+.moreBaby .title .topic,
+.moreTravel .title .topic,
+.moreFitness .title .topic,
+.moreShop .title .topic,
+.moreHouse .title .topic,
+.moreStudy .title .topic,
+.moreLife .title .topic,
+.moreHealth .title .topic,
+.moreCar .title .topic,
+.morePet .title .topic
+{
+    float:left;
+    font-size: 17px;
+}
+
+.morefood .title .more,
+.moreMarry .title .more,
+.moreBeauty .title .more,
+.moreHotel .title .more,
+.moreBaby .title .more,
+.moreTravel .title .more,
+.moreFitness .title .more,
+.moreShop .title .more,
+.moreHouse .title .more,
+.moreStudy .title .more,
+.moreLife .title .more,
+.moreHealth .title .more,
+.moreCar .title .more,
+.morePet .title .more
+{
+    float:right;
+    font-size: 14px;
+}
+
+
+.morefood .vari,
+.moreEnt .vari,
+.moreMarry .vari,
+.moreMovie .vari,
+.moreBeauty .vari,
+.moreHotel .vari,
+.moreBaby .vari,
+.moreTravel .vari,
+.moreFitness .vari,
+.moreShop .vari,
+.moreHouse .vari,
+.moreStudy .vari,
+.moreLife .vari,
+.moreHealth .vari,
+.moreCar .vari,
+.morePet .vari
+{
+    width: 90%;
+    height: 100%;
+    margin:0 auto;
+}
+
+.morefood .leftLi,
+.morefood .centerLi,
+.morefood .rightLi,
+.moreEnt .leftLi,
+.moreEnt .centerLi,
+.moreEnt .rightLi,
+.moreMarry .leftLi,
+.moreMarry .centerLi,
+.moreMarry .rightLi,
+.moreMovie .leftLi,
+.moreMovie .centerLi,
+.moreMovie .rightLi,
+.moreBeauty .leftLi,
+.moreBeauty .centerLi,
+.moreBeauty .rightLi,
+.moreHotel .leftLi,
+.moreHotel .centerLi,
+.moreHotel .rightLi,
+.moreBaby .leftLi,
+.moreBaby .centerLi,
+.moreBaby .rightLi,
+.moreTravel .leftLi,
+.moreTravel .centerLi,
+.moreTravel .rightLi,
+.moreFitness .leftLi,
+.moreFitness .centerLi,
+.moreFitness .rightLi,
+.moreShop .leftLi,
+.moreShop .centerLi,
+.moreShop .rightLi,
+.moreHouse .leftLi,
+.moreHouse .centerLi,
+.moreHouse .rightLi,
+.moreStudy .leftLi,
+.moreStudy .centerLi,
+.moreStudy .rightLi,
+.moreLife .leftLi,
+.moreLife .centerLi,
+.moreLife .rightLi,
+.moreHealth .leftLi,
+.moreHealth .centerLi,
+.moreHealth .rightLi,
+.moreCar .leftLi,
+.moreCar .centerLi,
+.moreCar .rightLi,
+.morePet .leftLi,
+.morePet .centerLi,
+.morePet .rightLi
+{
+    width: 120px;
+    height: 100%;
+    float:left;
+    font-size:12px
+}
+
+.morefood .rightLi p,
+.moreEnt .rightLi p,
+.moreMarry .rightLi p,
+.moreMovie .rightLi p,
+.moreBeauty .rightLi p,
+.moreHotel .rightLi p,
+.moreBaby .rightLi p,
+.moreTravel .rightLi p,
+.moreFitness .rightLi p,
+.moreShop .rightLi p,
+.moreHouse .rightLi p,
+.moreStudy .rightLi p,
+.moreLife .rightLi p,
+.moreHealth .rightLi p,
+.moreCar .rightLi p,
+.morePet .rightLi p
+{
+    text-indent: 1em;
+}
+
+.morefood .bottom .title,
+.moreEnt .bottom .title,
+.moreMovie .bottom .title,
+.moreBeauty .bottom .title,
+.moreHotel .bottom .title,
+.moreBaby .bottom .title,
+.moreTravel .bottom .title,
+.moreFitness .bottom .title,
+.moreShop .bottom .title,
+.moreHouse .bottom .title,
+.moreStudy .bottom .title,
+.moreLife .bottom .title,
+.moreHealth .bottom .title,
+.moreCar .bottom .title,
+.morePet .bottom .title
+{
+    font-size:17px
+}
+
+.morefood .title li,
+.moreEnt .title li,
+.moreMarry .title li,
+.moreMovie .title li,
+.moreBeauty .title li,
+.moreHotel .title li,
+.moreBaby .title li,
+.moreTravel .title li,
+.moreFitness .title li,
+.moreShop .title li,
+.moreHouse .title li,
+.moreStudy .title li,
+.moreLife .title li,
+.moreHealth .title li,
+.moreCar .title li,
+.morePet .title li
+{
+    background-color: #fff;
+    color:#333333;
+}
+
+.morefood p:hover,
+.moreEnt p:hover,
+.moreMarry p:hover,
+.moreMovie p:hover,
+.moreBeauty p:hover,
+.moreHotel p:hover,
+.moreBaby p:hover,
+.moreTravel p:hover,
+.moreFitness p:hover,
+.moreShop p:hover,
+.moreHouse p:hover,
+.moreStudy p:hover,
+.moreLife p:hover,
+.moreHealth p:hover,
+.moreCar p:hover,
+.morePet p:hover
+{
+    color:#f06000;
+    background-color: #fff;
+}
+
+.morefood p a,
+.moreEnt p a,
+.moreMarry p a,
+.moreMovie p a,
+.moreBeauty p a,
+.moreHotel p a,
+.moreBaby p a,
+.moreTravel p a,
+.moreFitness p a,
+.moreShop p a,
+.moreHouse p a,
+.moreStudy p a,
+.moreLife p a,
+.moreHealth p a,
+.moreCar p a,
+.morePet p a{
+    color:#777;
+}
+
+
+/* 美食 */
+.morefood .top{ 
+    width: 100%;
+    height: 230px;
+    
+}
+.morefood .bottom{ 
+    width: 100%;
+    height: 400px;
+
+}
+
+/* 休闲娱乐 */
+.moreEnt .top{ 
+    width: 100%;
+    height: 100px;
+    
+}
+.moreEnt .bottom{ 
+    width: 100%;
+    height: 260px;
+
+}
+
+/* 结婚 */
+.moreMarry .top{ 
+    width: 100%;
+    height: 250px;
+    
+}
+
+/* 电影演出赛事 */
+.moreMovie .top{ 
+    width: 100%;
+    height: 100px;
+    
+}
+.moreMovie .bottom{ 
+    width: 100%;
+    height: 300px;
+
+}
+
+/* 丽人 */
+.moreBeauty .top{ 
+    width: 100%;
+    height: 200px;
+    
+}
+.moreBeauty .bottom{ 
+    width: 100%;
+    height: 300px;
+
+}
+/* 酒店 */
+.moreHotel .top{ 
+    width: 100%;
+    height: 100px;
+    
+}
+.moreHotel .bottom{ 
+    width: 100%;
+    height: 300px;
+
+}
+/* 亲子 */
+.moreBaby .top{ 
+    width: 100%;
+    height: 120px;
+    
+}
+.moreBaby .bottom{ 
+    width: 100%;
+    height: 300px;
+
+}
+/* 周边游 */
+.moreTravel .top{ 
+    width: 100%;
+    height: 200px;
+    
+}
+.moreTravel .bottom{ 
+    width: 100%;
+    height: 300px;
+
+}
+/* 运动健身 */
+.moreFitness .top{ 
+    width: 100%;
+    height: 100px;
+    
+}
+.moreFitness .bottom{ 
+    width: 100%;
+    height: 300px;
+
+}
+/* 购物 */
+.moreShop .top{ 
+    width: 100%;
+    height: 200px;
+    
+}
+.moreShop .bottom{ 
+    width: 100%;
+    height: 300px;
+
+}
+/* 家装 */
+.moreHouse .top{ 
+    width: 100%;
+    height: 100px;
+    
+}
+.moreHouse .bottom{ 
+    width: 100%;
+    height: 300px;
+
+}
+/*学习培训 */
+.moreStudy .top{ 
+    width: 100%;
+    height: 130px;
+    
+}
+.moreStudy .bottom{ 
+    width: 100%;
+    height: 300px;
+
+}
+/* 生活服务 */
+.moreLife .top{ 
+    width: 100%;
+    height: 160px;
+    
+}
+.moreLife .bottom{ 
+    width: 100%;
+    height: 300px;
+
+}
+/* 医疗健康 */
+.moreHealth .top{ 
+    width: 100%;
+    height: 200px;
+    
+}
+.moreHealth .bottom{ 
+    width: 100%;
+    height: 300px;
+
+}
+/* 爱车 */
+.moreCar .top{ 
+    width: 100%;
+    height: 200px;
+    
+}
+.moreCar .bottom{ 
+    width: 100%;
+    height: 300px;
+
+}
+/* 宠物 */
+.morePet .top{ 
+    width: 100%;
+    height: 200px;
+    
+}
+.morePet .bottom{ 
+    width: 100%;
+    height: 300px;
+
+}

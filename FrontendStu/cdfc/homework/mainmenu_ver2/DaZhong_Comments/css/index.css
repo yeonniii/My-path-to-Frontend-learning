@@ -1,0 +1,991 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+.outer{
+    width: 1290px;
+    height: 3400px;
+    margin:0 auto;
+}
+
+.container {
+    width: 1190px;
+    height: 3400px;
+    margin: 0 auto;
+}
+
+.container .main {
+    width: 100%;
+    height: 530px;
+    position: relative;
+}
+
+.main .all{
+    width: 210px;
+    background-color: #f76613;
+    height: 35px;
+    position:absolute;
+    top:-35px;
+    left:0px;
+    line-height: 35px;
+    color:white;
+    text-indent: 1em;
+    z-index: 1;
+}
+
+.main .pre-order a{
+    display: inline-block;
+    position:absolute;
+    top:-35px;
+    left:280px;
+    height:35px;
+    line-height: 35px;
+    color:#333333;
+    z-index: 999;
+}
+
+
+.container .main .left,
+.container .main .center,
+.container .main .right {
+    float: left;
+}
+
+.container .main .left {
+    width: 210px;
+    height: 520px;
+    background-color: #373131;
+    color: white;
+    position: relative;
+}
+
+.container .main .left li {
+    height: 32px;
+    line-height: 32px;
+}
+
+.container .main .left ul li:hover {
+    background-color: #5f5a5a;
+}
+
+.container .main .left a {
+    display: inline-block;
+    text-align: center;
+    width: fit-content;
+}
+
+.container .main .left .classification {
+    text-indent: 1em;
+    color: white;
+}
+
+.container .main .left .detail {
+    color: #cccccc;
+    font-size: 13px;
+}
+
+.container .main .left a:hover {
+    color: #f76613;
+}
+
+
+.container .main .center {
+    width: 770px;
+    height: 520px;
+    margin: 10px 10px 0 10px;
+}
+
+
+/* 中间轮播图 */
+.container .main .center .banner {
+    width: 770px;
+    height: 300px;
+}
+
+.container .main .center .banner .swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.container .main .center .banner .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .main .center .banner .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 中间热门部分 */
+.container .main .center .hot {
+    margin-top: 10px;
+    width: 770px;
+    height: 210px;
+    background-color: #ffffff;
+}
+
+.container .main .center .hot ul {
+    float: left;
+}
+
+/* 热门-标题 */
+.container .main .center .hot .hot_title {
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    border-bottom: 1px dotted #eeeeee;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.container .main .center .hot .hot_title i {
+    color: #f76004;
+}
+
+/* 热门-标题下面的内容 */
+.container .main .center .hot ul li {
+    float: left;
+    width: 71px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 11px;
+    color: #333333;
+}
+.container .main .center .hot ul li a{
+    color:#333333;
+}
+.container .main .center .hot ul li a:hover{
+    color:#f06000;
+}
+
+
+/* 热门分类 */
+.container .main .center .hot_classification {
+    width: 216px;
+    height: 100%;
+    padding: 0 20px;
+
+}
+
+/* 热门商圈 */
+.container .main .center .hot_shopping {
+    width: 220px;
+    height: 100%;
+    padding: 0 20px;
+    /* border-right:1px dotted black; */
+    /* border-left:1px dotted black; */
+}
+
+/* 地铁线 */
+.container .main .center .hot_train {
+    width: 214px;
+    height: 100%;
+    padding: 0 20px;
+}
+
+/* 右边登录页面 */
+.container .main .right {
+    margin-top: 10px;
+    width: 190px;
+    height: 520px;
+    background-color: #ffffff;
+}
+
+.container .main .right .hi_log {
+    width: 90%;
+    height: 150px;
+    border-bottom: 1px dashed #eeeeee;
+}
+.container .main .right .hi_log a{
+    display: block;
+}
+
+.container .main .right .hi_log img {
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.container .main .right .hi_log li {
+    font-size: 12px;
+    width: 100%;
+    height: 20px;
+    text-align: center;
+    hyphenate-limit-chars: 20px;
+}
+
+.container .main .right .hi_log .intro {
+    color: #999999;
+}
+
+.container .main .right .hi_log .account {
+    width: 100px;
+    height: 25px;
+    line-height: 25px;
+    margin: 0 auto;
+    color: white;
+    background-color: #f76613;
+}
+.container .main .right .hi_log .account a{
+    display: block;
+    color: white;
+}
+
+/* 盒子共同部分 */
+.food-entertainment .food .title h3,
+.food-entertainment .entertainment .title h3,
+.marry .title h3,
+.beauty-baby .beauty .title h3,
+.beauty-baby .baby .title h3,
+.house .title h3,
+.study .title h3,
+.life .title h3 {
+    line-height: 35px;
+    font-size: 20px;
+    float: left;
+}
+
+.food-entertainment .food .title a,
+.food-entertainment .entertainment .title a,
+.marry .title a,
+.beauty-baby .beauty .title a,
+.beauty-baby .baby .title a,
+.house .title a,
+.study .title a,
+.life .title a {
+    float: right;
+    font-size: 12px;
+    line-height: 35px;
+    color: black;
+}
+
+
+.food-entertainment .food .title a:hover,
+.food-entertainment .entertainment .title a:hover,
+.marry .title a:hover,
+.beauty-baby .beauty .title a:hover,
+.beauty-baby .baby .title a:hover,
+.house .title a:hover,
+.study .title a:hover,
+.life .title a:hover {
+    color: #f76613;
+}
+
+/* 内容区域 */
+.food-entertainment {
+    width: 100%;
+    height: 420px;
+    margin: 0 auto;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+/* 清除浮动 */
+.food-entertainment::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.food-entertainment .food,
+.food-entertainment .entertainment {
+    width: 585px;
+    height: 420px;
+    float: left;
+
+}
+
+.entertainment {
+    margin-left: 20px;
+}
+
+.food,
+.entertainment {
+    background-color: #ffffff;
+}
+
+/* 美食部分 */
+.food .title {
+    width: 560px;
+    height: 35px;
+    line-height: 35px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+
+.food .food-detail {
+    width: 170px;
+    height: 20px;
+    font-size: 12px;
+    color: #999999;
+}
+
+.food .food-detail .type {
+    float: left;
+}
+
+.food .food-detail .street {
+    float: right;
+}
+
+.food .price {
+    font-size: 12px;
+    color: #999999;
+}
+
+.icon-meishi {
+    font-size: 18px;
+    color: orange
+}
+
+.food-entertainment .food .meishi {
+    width: 100%;
+    height: 380px;
+    background-color: cyan
+}
+
+.food-entertainment .food .list {
+    width: 570px;
+    height: 380px;
+    margin: 0 auto;
+}
+
+.food-entertainment .food .list li {
+    width: 170px;
+    height: 170px;
+    float: left;
+    margin: 10px
+}
+
+.food-entertainment .food .list li .img {
+    width: 100%;
+    height: 90px;
+    background-position: center;
+    background-size: cover;
+}
+
+/* 娱乐部分 */
+.entertainment .title {
+    width: 560px;
+    height: 35px;
+    line-height: 35px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.entertainment .entertainment-detail {
+    width: 170px;
+    height: 20px;
+    font-size: 12px;
+    color: #999999;
+}
+
+.entertainment .entertainment-detail .type {
+    float: left;
+}
+
+.entertainment .entertainment-detail .street {
+    float: right;
+}
+
+.entertainment .price {
+    font-size: 12px;
+    color: #999999;
+}
+
+.icon-jiubei {
+    font-size: 18px;
+    color: #b27af1;
+}
+
+.food-entertainment .entertainment .list {
+    width: 570px;
+    height: 380px;
+    margin: 0 auto;
+}
+
+.food-entertainment .entertainment .list li {
+    width: 170px;
+    height: 170px;
+    float: left;
+    margin: 10px
+}
+
+.food-entertainment .entertainment .list li .img {
+    width: 100%;
+    height: 90px;
+    background-position: center;
+    background-size: cover;
+}
+
+/* 结婚&家装 */
+.marry,
+.house {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    background-color: #ffffff;
+    margin-top: 30px;
+}
+
+.marry .title,
+.house .title {
+    width: 1150px;
+    height: 35px;
+    line-height: 35px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.icon-icon-test {
+    font-size: 18px;
+    color: #fcb5b5;
+}
+
+.icon-jiazhuang {
+    font-size: 18px;
+    color: #73b7ff;
+}
+
+.marry-left,
+.house-left {
+    width: 370px;
+    height: 436px;
+    position: relative;
+    margin-left: 20px;
+}
+
+.marry-left .takePic div,
+.house-left .takePic div {
+    width: 100%;
+    height: 436px;
+    margin-top: 15px;
+}
+
+.marry-left .takePic p {
+    width: 370px;
+    height: 45px;
+    background-color: rgba(182, 135, 124, .5);
+    position: absolute;
+    top: 391px;
+    text-align: center;
+    line-height: 45px;
+    color: white;
+    font-size: 20px;
+}
+
+.house-left .takePic p {
+    width: 370px;
+    height: 45px;
+    background-color: rgba(172, 196, 222, .7);
+    position: absolute;
+    top: 391px;
+    text-align: center;
+    line-height: 45px;
+    color: white;
+    font-size: 20px;
+}
+
+.marry-right,
+.house-right {
+    width: 780px;
+    height: 436px;
+    position: absolute;
+    top: 50px;
+    left: 415px;
+
+}
+
+
+
+.marry-right .cate div,
+.house-right .cate div {
+    width: 370px;
+    height: 208px;
+    float: left;
+}
+
+.marry-right .cate,
+.house-right .cate {
+    float: left;
+    margin-right: 20px;
+    position: relative;
+}
+
+.marry-right .cate1,
+.marry-right .cate2,
+.house-right .cate1,
+.house-right .cate2 {
+    margin-bottom: 20px;
+}
+
+.marry-right .cate p {
+    width: 370px;
+    height: 45px;
+    background-color: rgba(182, 135, 124, .5);
+    position: absolute;
+    top: 163px;
+    z-index: 2;
+    text-align: center;
+    line-height: 45px;
+    color: white;
+    font-size: 20px;
+}
+
+.house-right .cate p {
+    width: 370px;
+    height: 45px;
+    background-color: rgba(172, 196, 222, .7);
+    position: absolute;
+    top: 163px;
+    z-index: 2;
+    text-align: center;
+    line-height: 45px;
+    color: white;
+    font-size: 20px;
+}
+
+/* 丽人亲子 */
+.beauty-baby {
+    width: 100%;
+    height: 420px;
+    margin: 0 auto;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+/* 清除浮动 */
+.beauty-baby::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.beauty-baby .beauty,
+.beauty-baby .baby {
+    width: 585px;
+    height: 420px;
+    float: left;
+
+}
+
+.baby {
+    margin-left: 20px;
+}
+
+.beauty,
+.baby {
+    background-color: #ffffff;
+}
+
+/* 丽人部分 */
+.beauty .title {
+    width: 560px;
+    height: 35px;
+    line-height: 35px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.icon-ic_manualtype_zchd_click {
+    font-size: 18px;
+    color: #f97db7;
+}
+
+
+.beauty .beauty-detail {
+    width: 170px;
+    height: 20px;
+    font-size: 12px;
+    color: #999999;
+}
+
+.beauty .beauty-detail .type {
+    float: left;
+}
+
+.beauty .beauty-detail .street {
+    float: right;
+}
+
+.beauty .price {
+    font-size: 12px;
+    color: #999999;
+}
+
+.beauty-baby .beauty .list {
+    width: 570px;
+    height: 380px;
+    margin: 0 auto;
+}
+
+.beauty-baby .beauty .list li {
+    width: 170px;
+    height: 170px;
+    float: left;
+    margin: 10px
+}
+
+.beauty-baby .beauty .list li .img {
+    width: 100%;
+    height: 90px;
+    background-position: center;
+    background-size: cover;
+}
+
+/* 亲子部分 */
+.baby .title {
+    width: 560px;
+    height: 35px;
+    line-height: 35px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.icon-qinzi {
+    font-size: 18px;
+    color: #daa300;
+}
+
+.baby .baby-detail {
+    width: 170px;
+    height: 20px;
+    font-size: 12px;
+    color: #999999;
+}
+
+.baby .baby-detail .type {
+    float: left;
+}
+
+.baby .baby-detail .street {
+    float: right;
+}
+
+.baby .price {
+    font-size: 12px;
+    color: #999999;
+}
+
+.beauty-baby .baby .list {
+    width: 570px;
+    height: 380px;
+    margin: 0 auto;
+}
+
+.beauty-baby .baby .list li {
+    width: 170px;
+    height: 170px;
+    float: left;
+    margin: 10px
+}
+
+.beauty-baby .baby .list li .img {
+    width: 100%;
+    height: 90px;
+    background-position: center;
+    background-size: cover;
+}
+
+/* 学习培训&旅游酒店 */
+.study,
+.hotel {
+    width: 100%;
+    height: 240px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    margin-top: 30px;
+    overflow:hidden;
+}
+
+.study .title,
+.hotel .title {
+    width: 1150px;
+    height: 35px;
+    line-height: 35px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+
+.study .study-detail,
+.hotel .hotel-detail {
+    width: 170px;
+    height: 20px;
+    font-size: 12px;
+    color: #999999;
+}
+
+.study .study-detail .type,
+.hotel .hotel-detail .type {
+    float: left;
+}
+
+.study .study-detail .street,
+.hotel .hotel-detail .street {
+    float: right;
+}
+
+.study .price,
+.hotel .price {
+    font-size: 12px;
+    color: #999999;
+}
+
+.icon-e-learning-monitor {
+    font-size: 18px;
+    color: #73c8c6;
+}
+
+.icon-hotel1 {
+    font-size: 18px;
+    color: #ad9e8d;
+}
+
+.study ul {
+    width: 1170px;
+    height: 250px;
+    margin: 0 auto;
+}
+
+.study ul li,
+.hotel ul li {
+    width: 170px;
+    height: 96px;
+    float: left;
+    margin: 12.5px;
+}
+
+.study ul li .img,
+.hotel ul li .img {
+    width: 100%;
+    height: 90px;
+    background-position: center;
+    background-size: cover;
+}
+
+/* 生活服务 */
+.life {
+    width: 100%;
+    height: 300px;
+    background-color: #ffffff;
+    margin-top: 30px;
+}
+
+.life .title {
+    width: 1150px;
+    height: 35px;
+    line-height: 35px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.icon-shenghuofuwu {
+    color: #d59655;
+    font-size: 18px;
+}
+
+.life ul {
+    width: 1170px;
+    height: 250px;
+    margin: 0 auto;
+    margin-top: 15px;
+    padding-left:20px;
+}
+
+.life ul li {
+    width: 170px;
+    height: 96px;
+    float: left;
+    margin-right: 64px;
+
+    position: relative;
+}
+
+.life ul li .img {
+    width: 214px;
+    height: 214px;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.life ul li p {
+    width: 214px;
+    height: 51px;
+    background-color: rgba(182, 135, 124, .5);
+    position: absolute;
+    top: 163px;
+    z-index: 2;
+    text-align: center;
+    line-height: 45px;
+    color: white;
+    font-size: 20px;
+}
+
+/* 首页底部 */
+.footer {
+    width: 100%;
+    background-color: #f0f0f0;
+}
+
+.footer .top {
+    width: 1190px;
+    height: 280px;
+    margin: 0 auto;
+}
+
+.footer>.top>div {
+    float: left;
+    padding: 20px 0 15px 15px;
+}
+
+.footer>.top>div h4 {
+    height: 25px;
+    line-height: 25px;
+    color: #777
+}
+
+.footer>.top>div p {
+    width: 100%;
+    height: 20px;
+    font-size: 12px;
+}
+
+.footer>.top>div p a {
+    color: #777;
+}
+
+.footer>.top>div p a:hover {
+    color: #f76613;
+}
+
+.footer .top .business {
+    width: 320px;
+    height: 240px;
+}
+
+.footer .top .info {
+    width: 320px;
+    height: 205px;
+}
+
+.footer .top .client {
+    width: 320px;
+    height: 105px;
+}
+
+.footer .top .download {
+    width: 160px;
+    height: 180px;
+}
+
+.footer .top .download i {
+    font-size: 100px;
+    color: black;
+    text-align: center;
+}
+
+.footer .top .download p a:hover {
+    color: #777;
+}
+
+.footer .bottom {
+    width: 1190px;
+    height: 180px;
+    margin:0 auto;
+}
+
+.footer .bottom li {
+    width: 1190px;
+    height: 25px;
+    line-height: 25px;
+    margin: 0 auto;
+    text-align:center;
+    color:#999999;
+    font-size:12px;
+}
+
+.footer .bottom li a{
+    color:#999999;
+    font-size:12px;
+}
+
+.footer .bottom li a:hover{
+    color:#f76613;
+}
+
+.footer .bottom ul{
+    margin-top:10px;
+    text-align: center;
+}
+
+.footer .bottom ul a img{
+    width: fit-content;
+    height: 40px;
+}
+
+.nav{
+    width: 40px;
+    height: 336px;
+    position:sticky;
+    float:left;
+    z-index: 999;
+    bottom:95px;
+    left:-15px;
+}
+
+.nav li{
+    width: 28px;
+    height: 28px;
+    padding:6px;
+    background-color: #7a7171;
+    font-size:12px;
+    color:white;
+    text-align: center;
+    line-height: 32px;
+    margin-bottom:3px;
+    
+}
+
+.nav li:hover{
+    background-color: #c23d00;
+}
+
+.nav li p{
+    line-height: 15px;
+    margin:auto 0;
+
+}
+
+.nav li p a{
+    display:block;
+    color:white;
+}
+.nav li .pd{
+    line-height: 26px;
+}
+
+.nav .last{
+    background-color: #333333;
+}
+

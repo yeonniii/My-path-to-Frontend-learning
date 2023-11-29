@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: rgb(246, 246, 246);
+}
+
+
+/* 最上面一行 */
+.log {
+    height: 35px;
+    background-color: rgb(246, 246, 246);
+}
+
+.log1 {
+    width: 1190px;
+    height: 35px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.map {
+    position: absolute;
+    line-height: 35px;
+}
+.icon-position-mark{
+    color:#f06000;
+}
+.map #map{
+    display: inline-block;
+    height: 35px;
+}
+.map .mapname {
+    display: none;
+    width: 150px;
+    background-color: white;
+    position: absolute;
+    z-index: 20;
+    top:35px;
+    border:1px solid #ddd;
+    line-height: 25px;
+    padding: 0 5px;
+}
+.map .mapname p {
+    font-size: 12px;
+    color: #e0e0e0;
+}
+.map .mapname a {
+    font-size: 12px;
+    color: #808080;
+    padding: 0 4px;
+}
+.map .mapname a:hover {
+    color: #f63;
+}
+.log a {
+    color: black;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.plice {
+    position: absolute;
+    left: 790px;
+    top: 7px;
+}
+
+.spone {
+    position: absolute;
+    top: 7px;
+    left: 907px;
+}
+
+.sptwo {
+    position: absolute;
+    top: 7px;
+    left: 1011px;
+}
+
+.spthree {
+    position: absolute;
+    top: 7px;
+    left: 1116px;
+}
+
+.help ul {
+    width: 100px;
+    line-height: 34px;
+    z-index: 10;
+}
+
+.log1 .help li {
+    display: none;
+}
+
+.log1 .help a:hover {
+    color: orangered;
+}
+
+.help {
+    text-align: center;
+    line-height: 40px;
+}
+
+.help .two {
+    position: absolute;
+    left: 910px;
+}
+
+.help .three {
+    position: absolute;
+    left: 1014px;
+}
+
+.help .four {
+    position: absolute;
+    left: 1116px;
+}
+
+.help .two:hover {
+    background-color: white;
+    border: 1px solid rgb(246, 246, 246);
+    position: absolute;
+    left: 910px;
+}
+
+.help .three:hover {
+    background-color: white;
+    border: 1px solid rgb(246, 246, 246);
+    position: absolute;
+    left: 1014px;
+}
+
+.help .four:hover {
+    background-color: white;
+    border: 1px solid rgb(246, 246, 246);
+    position: absolute;
+    left: 1116px;
+}
+
+.help ul:hover li {
+    display: block;
+}
+
+.help li:hover {
+    background-color: rgb(246, 246, 246);
+}
+
+/* 第二行内容 */
+.whitebgc {
+    height: 120px;
+    background-color: white;
+}
+.logo1 {
+    width: 1200px;
+    margin: 0 auto;
+    height: 70px;
+    overflow: hidden;
+    padding: 20px 0 5px;
+    background-color: #fff;
+}
+
+.logo1 .left {
+    float: left;
+    width: 210px;
+    height: 57px;
+}
+
+.logo1 a img {
+    width: 210px;
+}
+
+.logo1 .logo2 {
+    float: left;
+    position: relative;
+    max-width: 800px;
+    height: 75px;
+    margin-left: 80px;
+    margin-right: 80px;
+    padding-top: 5px;
+}
+
+/* 搜索框 */
+.logo1 .logo2 input {
+    box-sizing: content-box;
+    height: 14px;
+    width: 380px;
+    padding: 9px;
+    border: 2px solid orangered;
+}
+.logo1 .logo2 input:focus {
+    outline: none;
+}
+/* 搜索按钮 */
+.logo1 .logo2 span {
+    display: inline-block;
+    position: relative;
+    left: -6px;
+    top: 2px
+}
+
+.logo1 .logo2 .pindao {
+    padding: 10px;
+    width: 100px;
+    height: 16px;
+    background-color: #f63;
+    line-height: 16px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-block;
+}
+
+.logo1 .logo2 .quanzhan {
+    padding: 10px;
+    margin-left: 5px;
+    width: 100px;
+    height: 14px;
+    background-color: white;
+    line-height: 16px;
+    text-align: center;
+    color: #f63;
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-block;
+    border: 1px solid #f63;
+}

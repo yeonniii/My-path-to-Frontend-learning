@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+/* 最上面一行 */
+.log {
+    height: 40px;
+    background-color: rgb(246, 246, 246);
+}
+
+.log1 {
+    width: 1300px;
+    height: 40px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.map {
+    position: absolute;
+    line-height: 40px;
+}
+
+.log a {
+    color: black;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.plice {
+    position: absolute;
+    left: 840px;
+    top: 10px;
+}
+
+.spone {
+    position: absolute;
+    top: 10px;
+    left: 957px;
+}
+
+.sptwo {
+    position: absolute;
+    top: 10px;
+    left: 1061px;
+}
+
+.spthree {
+    position: absolute;
+    top: 10px;
+    left: 1166px;
+}
+
+.help ul {
+    width: 100px;
+}
+
+.log1 .help li {
+    display: none;
+}
+
+.log1 .help a:hover {
+    color: orangered;
+}
+
+.help {
+    text-align: center;
+    line-height: 40px;
+}
+
+.help .two {
+    position: absolute;
+    left: 960px;
+}
+
+.help .three {
+    position: absolute;
+    left: 1064px;
+}
+
+.help .four {
+    position: absolute;
+    left: 1166px;
+}
+
+.help .two:hover {
+    background-color: white;
+    border: 1px solid rgb(246, 246, 246);
+    position: absolute;
+    left: 960px;
+}
+
+.help .three:hover {
+    background-color: white;
+    border: 1px solid rgb(246, 246, 246);
+    position: absolute;
+    left: 1064px;
+}
+
+.help .four:hover {
+    background-color: white;
+    border: 1px solid rgb(246, 246, 246);
+    position: absolute;
+    left: 1166px;
+}
+
+.help ul:hover li {
+    display: block;
+}
+
+.help li:hover {
+    background-color: rgb(246, 246, 246);
+}
+
+/* 第二行内容 */
+.logo1 {
+    width: 1200px;
+    margin: 0 auto;
+    height: 70px;
+    overflow: hidden;
+    padding: 20px 0 5px;
+}
+
+.logo1 .left {
+    float: left;
+    width: 210px;
+    height: 57px;
+}
+
+.logo1 a img {
+    width: 210px;
+}
+
+.logo1 .logo2 {
+    float: left;
+    position: relative;
+    max-width: 800px;
+    height: 75px;
+    margin-left: 80px;
+    margin-right: 80px;
+    padding-top: 5px;
+}
+
+/* 搜索框 */
+.logo1 .logo2 input {
+    box-sizing: content-box;
+    height: 14px;
+    width: 380px;
+    padding: 9px;
+    border: 2px solid orangered;
+}
+
+/* 搜索按钮 */
+.logo1 .logo2 span {
+    display: inline-block;
+    position: relative;
+    left: -6px;
+    top: 1px
+}
+
+.logo1 .logo2 .pindao {
+    padding: 10px;
+    width: 100px;
+    height: 16px;
+    background-color: #f63;
+    line-height: 16px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-block;
+}
+
+.logo1 .logo2 .quanzhan {
+    padding: 10px;
+    margin-left: 5px;
+    width: 100px;
+    height: 14px;
+    background-color: white;
+    line-height: 16px;
+    text-align: center;
+    color: #f63;
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-block;
+    border: 1px solid #f63;
+}

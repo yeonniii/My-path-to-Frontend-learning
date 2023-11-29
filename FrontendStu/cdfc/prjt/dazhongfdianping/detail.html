@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【新興传承烤鸭】电话,地址,价格,营业时间(图) - 大连美食 - 大众点评网</title>
+    <link rel="icon" href="images/detail/ico logo.ico">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/c/font_4319180_j0skdj0emnc.css">
+
+    <link rel="stylesheet" href="css/common/common(1).css">
+    <link rel="stylesheet" href="css/foot/foot.css">
+    <link rel="stylesheet" href="css/detail/detail.css">
+    <script src="js/jquery-1.12.4.js"></script>
+
+
+
+
+    <script>
+        $(function () {
+
+            function getCurrentTime() {
+                var now = new Date($.now());
+                var year = now.getFullYear();
+                var month = now.getMonth() + 1;
+                var date = now.getDate();
+                var hour = now.getHours();
+                var minute = now.getMinutes();
+                var second = now.getSeconds();
+
+                var currentTime = year + "-" + month + "-" + date + " " + hour + ":" + minute + ":" + second;
+                return currentTime;
+            }
+
+            $(document).ready(function () {
+                var currentTime = getCurrentTime();
+                $("#time").text(currentTime);
+
+                $(".btn").click(function () {
+                    var text = $("#text").val()
+                    var $newLi = $("<li class='lll'>" + text + "<br>" + currentTime + "</li>")
+                    $(".content").prepend($newLi)
+                    text = $("#text").val("")
+                    $('html').stop().animate(
+                        { scrollTop: 1000 }, 500)
+
+                })
+
+            })
+
+            /* 评论区发送功能 */
+            $(".icon-xiezi").click(function () {
+
+                $('html').stop().animate(
+                    { scrollTop: 1300 }, 500)
+
+            })
+
+
+
+
+            /*  $(".btn").click(function () {
+                 var text = $("#text").val()
+                 var $newLi = $("<li class='lll'>" + text +"</li>")
+                 $(".content").prepend($newLi)
+                 text = $("#text").val("")
+                 $('html').stop().animate(
+                     { scrollTop: 1000 }, 500)
+ 
+             }) */
+            $("#text").on("keydown", function (event) {
+                if (event.which === 13) {
+                    var text = $("#text").val()
+                    var $newLi = $("<li class='lll'>" + text + "</li>")
+                    $(".content").prepend($newLi)
+                    text = $("#text").val("")
+                    $('html').stop().animate(
+                        { scrollTop: 1000 }, 500)
+
+                }
+            })
+
+
+
+
+            /* 商家展示切换功能 */
+            $(".tab_list li").click(function () {
+
+                $(this).addClass("current").siblings().removeClass("current")
+
+                $(".item1").eq($(".tab_list li").index(this)).show().siblings().hide()
+            })
+            /* 评级星星切换 */
+            $(".footerbox2 .p1 span").click(function () {
+                $(this).addClass("ss").prevAll().addClass("ss")
+                $(this).addClass("ss").nextAll().removeClass("ss")
+            })
+
+            $(".footerbox2 .p2 span").click(function () {
+                $(this).addClass("ss").prevAll().addClass("ss")
+                $(this).addClass("ss").nextAll().removeClass("ss")
+            })
+
+            $(".footerbox2 .p3 span").click(function () {
+                $(this).addClass("ss").prevAll().addClass("ss")
+                $(this).addClass("ss").nextAll().removeClass("ss")
+            })
+
+            /* 评论区评级显示 */
+            $("#text").focus(function () {
+                $(".footerbox2").stop().slideDown(200, function () {
+                })
+            })
+            /* $("#text").blur(function () {
+                $(".footerbox2").stop().slideUp(200, function () {
+
+                })
+            }) */
+
+            /* 右侧悬停菜单 */
+            $(".J_view_about").mouseover(function () {
+                $(".box").stop().slideDown(200, function () {
+                })
+            })
+            $(".J_view_about").mouseout(function () {
+                $(".box").stop().slideUp(200, function () {
+
+                })
+            })
+
+            /* 头部悬停二维码 */
+            $(".a1").mouseover(function () {
+                $(".qrp").stop().fadeIn(200, function () {
+
+                })
+            })
+            $(".a1").mouseout(function () {
+                $(".qrp").stop().fadeOut(200, function () {
+                })
+            })
+
+            /* 页面固定定位二维码 */
+            $(function () {
+                $(document).scroll(function () {
+                    if ($(document).scrollTop() >= $('.basic-info').offset().top) {
+                        $('.gaoxiao').fadeIn(500)
+                    } else {
+                        $('.gaoxiao').fadeOut(500)
+                    }
+                })
+            })
+            $(".gaoxiao").mouseover(function () {
+                $(".wangyiran").stop().fadeIn(200, function () {
+
+                })
+            })
+            $(".gaoxiao").mouseout(function () {
+                $(".wangyiran").stop().fadeOut(200, function () {
+                })
+            })
+
+            /* 底部tab切换 */
+
+            $(".xiabianbiaoti li").click(function () {
+
+                $(this).addClass("xiabianbiaoti1").siblings().removeClass("xiabianbiaoti1")
+
+                $(".xiabianneirong1").eq($(".xiabianbiaoti li").index(this)).show().siblings().hide()
+            })
+        })
+
+    </script>
+</head>
+
+<body>
+    <!-- 最上面一行 -->
+    <div class="log">
+        <div class="log1">
+            <div class="map">
+                <a href="javascript:void(0)" id="map"><img class="icon-position-mark iconfont" src="" alt=""
+                        style="margin-right: 5px;margin-left: 10px;">大连[更换]
+                </a>
+                <div class="mapname">
+                    <div>
+                        <p>
+                            国内城市
+                        </p>
+                        <a href="">北京</a>
+                        <a href="">上海</a>
+                        <a href="">广州</a>
+                        <a href="">深圳</a>
+                        <a href="">天津</a>
+                        <a href="">南京</a>
+                        <a href="">杭州</a>
+                        <a href="">苏州</a>
+                        <a href="">武汉</a>
+                        <a href="">成都</a>
+                        <a href="">重庆</a>
+                        <a href="">西安</a>
+                        <hr>
+                        <p>
+                            国外城市
+                        </p>
+                        <a href="">东京</a>
+                        <a href="">首尔</a>
+                        <a href="">曼谷</a>
+                        <a href="">巴黎</a>
+                        <p style="text-align: right;">
+                            更多城市
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <span class="spone">|</span>
+            <div class="help">
+                <ul class="four">
+                    <a href="">帮助中心</a>
+                    <li>
+                        <a href="">平台规则</a>
+                    </li>
+                    <li>
+                        <a href="">联系客服</a>
+                    </li>
+                </ul>
+            </div>
+            <span class="sptwo">|</span>
+            <div class="help">
+                <ul class="three">
+                    <a href="">商户服务</a>
+                    <li>
+                        <a href="">商户中心</a>
+                    </li>
+                    <li>
+                        <a href="">商户合作</a>
+                    </li>
+                    <li>
+                        <a href="">招募餐饮代理</a>
+                    </li>
+                    <li>
+                        <a href="">招募非餐饮代理</a>
+                    </li>
+                    <li>
+                        <a href="">餐饮商户中心</a>
+                    </li>
+                </ul>
+            </div>
+            <span class="spthree">|</span>
+            <div class="help">
+                <ul class="two">
+                    <a href="">个人中心</a>
+                    <li>
+                        <a href="">我的评价</a>
+                    </li>
+                    <li>
+                        <a href="">我的收藏</a>
+                    </li>
+                    <li>
+                        <a href="">我的团购</a>
+                    </li>
+                    <li>
+                        <a href="">我的订座</a>
+                    </li>
+                    <li>
+                        <a href="">我的设置</a>
+                    </li>
+                    <li>
+                        <a href="">酒店订单</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="plice">
+                <a href="">你好，请登录/注册</a>
+            </div>
+        </div>
+    </div>
+    <!-- 中间带logo的一行 -->
+    <div class="whitebgc">
+        <div class="logo1">
+            <a class="left" href=""><img src="images/common/title .png" alt=""></a>
+            <div class="logo2" action="">
+                <input type="text" name="" id="" value="" placeholder="搜索商户名、地址、菜名、外卖等">
+                <span>
+                    <a href="" class="pindao">频道搜索</a>
+                    <a href="" class="quanzhan">全站搜索</a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="boss">
+        <div class="breadcrumb">
+            <a href="">大连美食</a>
+            >
+            <a href="">北京菜</a>
+            >
+            <a href="">中山区</a>
+            >
+            <a href="">胜利广场/青泥洼桥</a>
+            >
+            <span>新興传承烤鸭</span>
+        </div>
+
+
+
+        <div class="main">
+
+
+            <!-- 简介 -->
+
+            <div class="basic-info">
+                <h2 class="shop-name">新興传承烤鸭 <a class="a1" href=""><span class="icon-xiajiantou iconfont"></span>手机扫码
+                        优惠买单
+                    </a>
+                    <p class="qr"><img class="qrp" src="images/detail/手机扫码图片.jpeg" alt=""></p>
+                </h2>
+                <div class="brief-info">
+                    <span class="item">4015条评价</span>
+                    <span class="item">人均：78元
+                    </span>
+                    <span>
+                        <span class="item">口味：4.8</span>
+                        <span class="item">环境：4.5</span>
+                        <span class="item">服务：4.6</span>
+                    </span>
+                </div>
+                <div class="expand-info-address">
+                    <span>地址: 昆明街23号<span class="icon-position-mark iconfont"></span></span>
+                </div>
+                <div class="expand-info-tel">
+                    电话：0411-84173039 18704282168
+                </div>
+                <div class="promosearch-wrapper">特色：<span class="tesetuan">团</span>
+                </div>
+                <div class="other-J-other">
+                    <span>
+                        营业时间：周一至周日 10:00-21:00
+                    </span>
+                    <a class="a2" href="">修改</a>
+                    <div style="color: white;" href="" class="icon-xiezi iconfont">写评价</div>
+                    <div class="tubiao">
+                        <a href="" class="icon-fenxiang iconfont"></a>
+                        <a href="" class="icon-shoucang iconfont"></a>
+                        <a href="" class="icon-baocuo iconfont"></a>
+                    </div>
+                </div>
+
+            </div>
+            <!-- 优惠促销 -->
+            <div class="mod-sales-promotion-clearfix">
+                <h3 style="font-size: 16px;">优惠促销</h3>
+                <div class="group-clearfix">
+                    <div class="item-big">
+
+                        <img src="images/detail/促销1.jpg@160w_100h_1e_1c_1l_watermark=1&&r=1&p=9&x=2&y=2&relative=1&o=20"
+                            alt="">
+                        <span class="title">整只烤鸭提前预定</span>
+                        <span class="price">
+                            <em style="font-size: 14px;">¥</em>
+                            85.00
+                        </span>
+                        <del class="del-price">¥102.00</del>
+                        <div class="tag-tuan">团</div>
+                        <span class="sold-count">已售0</span>
+                    </div>
+                    <div class="item-big">
+
+                        <img src="images/detail/促销1.jpg@160w_100h_1e_1c_1l_watermark=1&&r=1&p=9&x=2&y=2&relative=1&o=20"
+                            alt="">
+                        <span class="title">整只烤鸭提前预定</span>
+                        <span class="price">
+                            <em style="font-size: 14px;">¥</em>
+                            85.00
+                        </span>
+                        <del class="del-price">¥102.00</del>
+                        <div class="tag-tuan">团</div>
+                        <span class="sold-count">已售0</span>
+                    </div>
+                    <!-- 清除浮动 -->
+                    <!-- <div class="fudong"></div> -->
+                </div>
+                <div class="group-clearfix1">
+                    <div class="tag-tuan">团</div>
+                    <span class="price">¥138.00</span>
+                    <del class="del-price">¥167.00</del>
+                    <a href="">必点两人餐</a>
+                </div>
+                <div class="group-clearfix1">
+                    <div class="tag-tuan">团</div>
+                    <span class="price">¥138.00</span>
+                    <del class="del-price">¥167.00</del>
+                    <a href="">必点两人餐</a>
+                </div>
+                <!-- 清除浮动 -->
+                <!-- <div class="fudong"></div> -->
+
+
+            </div>
+            <!-- 商家展示界面 -->
+            <div class="tab">
+                <div class="tab_list">
+                    <ul>
+                        <li class="current">推荐菜</li>
+                        <li>环境</li>
+                        <li>价目表</li>
+                        <li>官方相册</li>
+                        <li>食品安全档案</li>
+                    </ul>
+                </div>
+                <div class="tab_con">
+                    <div class="item1" style="display: block;">
+                        <ul class="u1">
+                            <li>
+                                <a href="">
+                                    <img alt="">
+                                    <p>烤鸭</p>
+                                    <span style="color: white;">¥89</span>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img alt="">
+                                    <p>烤鸭</p>
+                                    <span style="color: white;">¥89</span>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img alt="">
+                                    <p>烤鸭</p>
+                                    <span style="color: white;">¥89</span>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img alt="">
+                                    <p>烤鸭</p>
+                                    <span style="color: white;">¥89</span>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img alt="">
+                                    <p>烤鸭</p>
+                                    <span style="color: white;">¥89</span>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img alt="">
+                                    <p>烤鸭</p>
+                                    <span style="color: white;">¥89</span>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img alt="">
+                                    <p>烤鸭</p>
+                                    <span style="color: white;">¥89</span>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img alt="">
+                                    <p>烤鸭</p>
+                                    <span style="color: white;">¥89</span>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img alt="">
+                                    <p>烤鸭</p>
+                                    <span style="color: white;">¥89</span>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img alt="">
+                                    <p>烤鸭</p>
+                                    <span style="color: white;">¥89</span>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img alt="">
+                                    <p>烤鸭</p>
+                                    <span style="color: white;">¥89</span>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img alt="">
+                                    <p>烤鸭</p>
+                                    <span style="color: white;">¥89</span>
+                                </a>
+
+                            </li>
+
+
+                        </ul>
+                    </div>
+                    <div class="item1">
+                        <li class="l2">
+                            <a href="">
+                                <img alt="">
+
+                            </a>
+                            <a href="">
+                                <img alt="">
+
+                            </a>
+                            <a href="">
+                                <img alt="">
+
+                            </a>
+                            <a href="">
+                                <img alt="">
+
+                            </a>
+                            <a href="">
+                                <img alt="">
+
+                            </a>
+                            <a href="">
+                                <img alt="">
+
+                            </a>
+                            <a href="">
+                                <img alt="">
+
+                            </a>
+                            <a href="">
+                                <img alt="">
+
+                            </a>
+
+                        </li>
+
+                    </div>
+                    <div class="item1">
+
+                    </div>
+                    <div class="item1">
+
+                    </div>
+                    <div class="item1">
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- 底部发表评论区 -->
+            <div>
+                <div></div>
+                <h2 style="display: inline-block;">网友评价</h2>
+                <div style="display: inline-block;">
+                    <input type="text" class="product">
+                    <button class="search-pro">搜索评价</button>
+                </div>
+
+            </div>
+            <div id="container">
+                <ul class="content" id="content">
+                    <li class="lll">好吃</li>
+                    <li class="lll">不好吃</li>
+                    <li class="lll">一般</li>
+                    <li class="lll">真难吃</li>
+                </ul>
+            </div>
+            <div class="footer">
+                <div class="footerbox">
+                    <span class="s1">去过新興传承烤鸭？给大家分享体验</span>
+                    <textarea name="" id="text" cols="30" rows="10"></textarea>
+
+                </div>
+                <div class="footerbox2">
+                    <!-- <span class="span1"> -->
+                    <div class="p1">
+                        <div style="background-color: white;">口味:</div>
+                        <span class="ss">1</span>
+                        <span>2</span>
+                        <span>3</span>
+                        <span>4</span>
+                        <span>5</span>
+                    </div>
+
+                    <!-- <span class="span2"> -->
+                    <div class="p2">
+                        <div style="background-color: white;">环境:</div>
+                        <span class="ss">1</span>
+                        <span>2</span>
+                        <span>3</span>
+                        <span>4</span>
+                        <span>5</span>
+                    </div>
+
+                    <!-- <span class="span3" -->
+                    <div class="p3">
+                        <div style="background-color: white;">服务:</div>
+                        <span class="ss">1</span>
+                        <span>2</span>
+                        <span>3</span>
+                        <span>4</span>
+                        <span>5</span>
+                    </div>
+                    <div class="btn">发表评论 </div>
+                </div>
+
+            </div>
+
+            <!-- 底部图片 -->
+
+            <div class="mod-shop-owner">
+                <h2 class="mod-title">App专享优惠</h2>
+                <div>
+                    <a class="aaaa" href=""></a>
+                </div>
+            </div>
+
+            <!-- 底部推荐栏 -->
+            <div class="nav-tabs">
+                <p class="description">大众点评大连烤鸭频道为您提供新興传承烤鸭地址，电话，最新菜单等最新商户信息，找大连美食，就上大众点评。</p>
+                <div class="xiabian">
+                    <div class="xiabianbiaoti">
+                        <ul>
+                            <li class="xiabianbiaoti1">热门商圈</li>
+                            <li>热门烤鸭推荐</li>
+                            <li>品牌商户推荐</li>
+                            <li>推荐导航</li>
+                        </ul>
+                    </div>
+                    <div class="xiabianneirong">
+                        <div class="xiabianneirong1" style="display: block;">
+                            <a href="">万达广场烤鸭</a>
+                            <a href="">黑石礁烤鸭</a>
+                            <a href="">解放广场烤鸭</a>
+                            <a href="">西安路烤鸭</a>
+                            <a href="">开发区烤鸭</a>
+                            <a href="">马兰子烤鸭</a>
+                            <a href="">中山路烤鸭</a>
+                            <a href="">三八广场烤鸭</a>
+
+                        </div>
+                        <div class="xiabianneirong1">
+                            <a href="">悦厨果木烤鸭(华润·海中国纯海岸店)</a>
+                            <a href="">正德楼果木烤鸭(东港店)</a>
+                            <a href="">冒二三冒烤鸭(中央大道店)</a>
+                            <a href="">北京羲和雅苑烤鸭坊(恒隆店)</a>
+                            <a href="">老满族春饼·烤鸭(罗斯福店)</a>
+                            <a href="">饼小春·烤鸭·春饼</a>
+                            <a href="">中山路烤鸭</a>
+                            <a href="">三八广场烤鸭</a>
+                        </div>
+                        <div class="xiabianneirong1">
+                            <a href="">万达广场烤鸭</a>
+                            <a href="">黑石礁烤鸭</a>
+                            <a href="">解放广场烤鸭</a>
+                            <a href="">西安路烤鸭</a>
+                            <a href="">开发区烤鸭</a>
+                            <a href="">马兰子烤鸭</a>
+                            <a href="">中山路烤鸭</a>
+                            <a href="">三八广场烤鸭</a>
+                        </div>
+                        <div class="xiabianneirong1">
+                            <a href="">万达广场烤鸭</a>
+                            <a href="">黑石礁烤鸭</a>
+                            <a href="">解放广场烤鸭</a>
+                            <a href="">西安路烤鸭</a>
+                            <a href="">开发区烤鸭</a>
+                            <a href="">马兰子烤鸭</a>
+                            <a href="">中山路烤鸭</a>
+                            <a href="">三八广场烤鸭</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+        <!-- 右侧栏 -->
+
+        <div class="aside">
+            <div class="aside-photos">
+                <div class="photos-container">
+                    <a href="">
+                        <img src="images/detail/右侧栏顶部图片.jpg@240w_180h_1e_1c_1l_watermark=1&&r=1&p=9&x=2&y=2&relative=1&o=20"
+                            style="width: 270px;height: 180px;" alt="">
+                        <p>
+                            <a style="font-size: 20px;" href="" class="icon-xiangji iconfont"></a>
+                            <a href="">16271</a>
+                            <a style="float: right;" href="">添加照片</a>
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="aside-bottom">
+                <div class="qrcode-aside"></div>
+                <div class="around-info">
+                    <h3>
+                        <a href="">附近商户</a>
+                    </h3>
+                    <div class="J-panel">
+                        <ul class="list">
+                            <li class="item">
+                                <a href="" class="pic">
+                                    <img alt="">
+                                </a>
+                                <a href="" class="title">正黄旗海鲜烧烤</a>
+                            </li>
+                            <li class="item">
+                                <a href="" class="pic">
+                                    <img alt="">
+                                </a>
+                                <a href="" class="title">正黄旗海鲜烧烤</a>
+                            </li>
+                            <li class="item">
+                                <a href="" class="pic">
+                                    <img alt="">
+                                </a>
+                                <a href="" class="title">正黄旗海鲜烧烤</a>
+                            </li>
+                            <li class="item">
+                                <a href="" class="pic">
+                                    <img alt="">
+                                </a>
+                                <a href="" class="title">正黄旗海鲜烧烤</a>
+                            </li>
+                            <li class="item">
+                                <a href="" class="pic">
+                                    <img alt="">
+                                </a>
+                                <a href="" class="title">正黄旗海鲜烧烤</a>
+                            </li>
+                            <a href="" style="font-size: 12px;">更多</a>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="J_view_about">
+                    <h4>
+                        <a href="">看过的人还看过</a>
+                    </h4>
+                    <ul class="list">
+                        <li class="item">
+                            <a href="">北京羲和雅苑烤鸭坊 恒隆店</a>
+                            <p>3356人评价</p>
+                        </li>
+                        <li class="item">
+                            <a href="">北京羲和雅苑烤鸭坊 恒隆店</a>
+                            <p>3356人评价</p>
+                        </li>
+                        <li class="item">
+                            <a href="">北京羲和雅苑烤鸭坊 恒隆店</a>
+                            <p>3356人评价</p>
+                        </li>
+                        <div class="box">
+                            <ul class="list">
+                                <li class="item">
+                                    <a href="">北京羲和雅苑烤鸭坊 恒隆店</a>
+                                    <p>3356人评价</p>
+                                </li>
+                                <li class="item">
+                                    <a href="">北京羲和雅苑烤鸭坊 恒隆店</a>
+                                    <p>3356人评价</p>
+                                </li>
+                                <li class="item">
+                                    <a href="">北京羲和雅苑烤鸭坊 恒隆店</a>
+                                    <p>3356人评价</p>
+                                </li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <script src="js/detail/detail.js"></script>
+    <script src="js/common/js"></script>
+
+
+    <!-- 固定定位二维码 -->
+    <div class="gaoxiao">
+        <div class="icon-erweima iconfont">
+        </div>
+        <div class="wangyiran"></div>
+
+
+        <!-- 尾部 -->
+        <div class="foot-container">
+            <div class="smaller">
+                <p>
+                    <a href="">关于我们</a>
+                    <a href="">商户诚信公约</a>
+                    <a href="">规则中心</a>
+                    <a href="">媒体报道</a>
+                    <a href="">商户入驻</a>
+                    <a href="">推广服务</a>
+                    <a href="">人才招聘</a>
+                    <a href="">最新咨询</a>
+                    <a href="">联系我们</a>
+                    <a href="">应用下载</a>
+                </p>
+                <p>
+                    <span>
+                        ©2003-2022 dianping.com, All Rights Reserved.
+                    </span>
+                    <span>
+                        本站发布的所有内容，未经许可，不得转载，详见<a href="">《知识产权声明》</a>。
+                    </span>
+                </p>
+            </div>
+        </div>
+</body>
+
+</html>

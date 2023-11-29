@@ -1,0 +1,349 @@
+*{
+    
+    background-repeat: no-repeat;
+    background-position: center;
+    padding:0;
+    margin:0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    width: 750px;
+    
+}
+
+.header{
+    width: 10rem;
+    height: 3.6rem;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header .header-top{
+    width: 10rem;
+    height: 1.2rem;
+}
+
+
+.header .header-top img{
+    width: 10rem;
+    height: 1.2rem;
+}
+
+.header .header-bottom
+{
+    width: 10rem;
+    height: 2.4rem;
+    height: 1.2rem;
+    min-width: 100%;
+    background-color: #fed731;
+    
+}
+
+.header .header-bottom .header-nav-wrap{
+    width: 10rem;
+    height: 1.2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header .header-bottom .header-nav-wrap .icon{
+    width: .48rem;
+}
+.header .header-bottom .header-nav-wrap .mianxi{
+    width: 5.2rem;
+}
+
+.header .header-bottom .header-search{
+    width: 10rem;
+    height: 1.2rem;
+    background-color: #fed731;
+    padding:0 .32rem;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+.header .header-bottom .header-search a{
+    width: 9.36rem;
+    height: .8rem;
+    display: flex;
+    flex-direction: row;
+    background: #FFF;
+    border-radius: .4rem;
+    box-sizing: border-box;
+    align-items: center;
+}
+.header .header-bottom .header-search i{
+    padding-left: .2rem;
+    font-size: .3333rem;
+    padding:0 .1333rem;
+}
+
+.header .header-bottom .header-search input{
+    
+    border: none;
+    font-size: .3333rem;
+    color: #999999;
+}
+
+.nav-wrapper{
+    width: 10rem;
+    height: 4.2667rem;
+    
+}
+.nav-wrapper ul{
+    width: 10rem;
+    height: 4.2667rem;
+    float:left;
+}
+
+.nav-wrapper li{
+    float:left;
+    width: 2rem;
+    height: 1.8933rem;
+}
+
+
+.nav-wrapper a{
+    width: 2rem;
+    height: 1.8933rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: flex-end
+}
+
+.nav-wrapper a img{
+    width: 1.12rem;
+    height: 1.12rem;
+}
+
+.nav-wrapper a span{
+    font-size: .2933rem;
+    overflow: hidden;
+    font-size: .2933rem;
+    margin-top: 0.1rem;
+    color: #666;
+}
+
+.two-wrap{
+    width: 10rem;
+    padding-left: .2667rem;
+    height: 9.12rem;
+    overflow: hidden;
+}
+
+.two-wrap .left-wrap{
+    width: 4.56rem;
+    height:9.12rem;
+    float:left;
+    padding:0 .1333rem;
+}
+
+.two-wrap .left-wrap .goodPrice{
+    width: 4.56rem;
+    height: 2.8rem;
+    position: relative;
+    padding: .6133rem 0 0 0 .16rem;
+    margin-bottom: .24rem;
+}
+
+.two-wrap .left-wrap .goodPrice .bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4.56rem;
+    height: 2.8rem;
+}
+
+.two-wrap .left-wrap .goodPrice .bg img{
+    width: 4.56rem;
+    height: 2.8rem;
+}
+
+.two-wrap .left-wrap .goodPrice .pro{
+    width: 2.0533rem;
+    height: 2.0533rem;
+    margin-right: .1333rem;
+    display:block;
+    top: .6667rem;
+    position: relative;
+    float:left;
+}
+
+.two-wrap .left-wrap .goodPrice .pro img{
+    width: 100%;
+    height: 100%;
+}
+
+.two-wrap .left-wrap .goodPrice .pro span{
+    position: absolute;
+    bottom:0;
+    left:50%;
+    height: .3733rem;
+    padding: 0 .1867rem;
+    border-radius: 0.56rem;
+    font-size: 0.30rem;
+    white-space: nowrap;
+    line-height: .3733rem;
+    transform: translate(-50%);
+    color:#f60079;
+    background-color:#fdebea ;
+}
+
+.two-wrap .left-wrap .banner-wrap{
+    width: 4.56rem;
+    height: 5.84rem;
+    background-color:azure
+}
+.banner-wrap {
+    width: 100%;
+    height: 100%;
+}
+.banner-wrap img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.guessULike{
+    width: 10rem;
+}
+.guessULike .title{
+    display: block;
+    width: 9.36rem;
+    height: .8rem;
+    margin:0 auto;
+}
+
+.guessULike .title img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.guessULike .pro-lists-wrapper{
+    width: 10rem;
+    background-color: #F7F7F7;
+    display: flex;
+}
+
+.guessULike .pro-lists-wrapper .pro-lists{
+    width: 9.36rem;
+    margin:0 auto;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+}
+
+.guessULike .pro-lists-wrapper .pro-lists ul{
+    width: 4.56rem;
+    height: 7.04rem;
+    padding:0 0 0 .1867rem 0;
+}
+
+.guessULike .pro-lists-wrapper .pro-lists ul li{
+    width: 100%;
+}
+
+.guessULike .pro-lists-wrapper .pro-lists ul img{
+    width: 4.56rem;
+    height: 4.56rem;
+    border-radius: .1333rem .1333rem 0 0;
+}
+
+.guessULike .pro-lists-wrapper .pro-lists ul .detail{
+    margin: .24rem auto 0;
+    width: 4.24rem;
+    height: .8933rem;
+    font-size: .4rem;
+    font-weight:bold;
+}
+
+.guessULike .pro-lists-wrapper .pro-lists ul .tag{
+    width: 3.5867rem;
+    height: .32rem;
+    display: flex;
+    margin: .1467rem .16rem .32rem;
+    overflow:hidden;
+    flex-wrap:wrap;
+}
+
+.guessULike .pro-lists-wrapper .pro-lists ul .tag .self{
+    width: .64rem;
+    height: .32rem;
+}
+.guessULike .pro-lists-wrapper .pro-lists ul .tag span{    height: .2933rem;
+    margin:0 .04rem .0267rem .0267rem;
+    border-radius: .08rem;
+    padding: .0267rem .16rem;
+    line-height:.243rem;
+    font-size: .2rem;
+    box-sizing: border-box;
+    border: .0133rem solid #FFBB00;
+    background-color: #FEFBEE;
+}
+
+.guessULike .pro-lists-wrapper .pro-lists ul .price{
+    width: 4.4rem;
+    height: .5067rem;
+    color:#ff4422;
+    font-weight:bold;
+    font-size: .4rem;
+}
+
+
+
+/* 底部固定菜单栏样式 */
+.tabber {
+    width: 10rem;
+    height: 2rem;
+    display: flex;
+    z-index: 999;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff; /* 背景颜色 */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1); /* 底部阴影效果 */
+  }
+
+  /* 索引项样式 */
+  .tabber a {
+    width: 100%;
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* 图标样式 */
+  .tabber i {
+    font-size: .5333rem;
+    color: #333; /* 设置默认颜色 */
+  }
+
+  /* 文字样式 */
+  .tabber .text {
+    font-size: .3333rem;
+    margin-top: .04rem;
+  }
+
+  /* 添加选中状态样式 */
+  .tabber a.active i {
+    color: #2698fa; /* 设置选中颜色 */
+  }
+  /* 添加padding-bottom，避免底部菜单遮盖内容 */
+body {
+    padding-bottom: 1.3333rem; /* tabber的高度 */
+  }

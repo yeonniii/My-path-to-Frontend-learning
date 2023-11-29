@@ -1,0 +1,50 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    background-color: #f6f6f6;
+}
+
+.jd-wrapper {
+    width: 100%;
+}
+
+.header .nav {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: #c11b00;
+    color: white;
+    overflow: hidden;
+}
+
+.header .nav .menu {
+    float: left;
+    text-align: left;
+}
+
+.header .nav .search {
+    width: 80%;
+    float: left;
+    text-align: center;
+}
+
+.header .nav .search input {
+    width: 100%;
+    float: left;
+    border-radius: 10px;
+}
+
+
+
+.header .nav .log {
+    width: 10%;
+    /* 登录占据 20% 的宽度 */
+    float: right;
+    text-align: right;
+}
+

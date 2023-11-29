@@ -1,0 +1,336 @@
+*{
+    margin:0;
+    padding:0;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* 顶部导航条 */
+.nav-bar{
+    width: 100%;
+
+}
+
+.gray-bar-wrap{
+    width: 100%;
+    background-color: #f8f8f8;
+}
+
+/* 灰色条 */
+.gray-bar{
+    width: 1024px;
+    height: 40px;
+    margin:0 auto;
+    color:#757575;
+    font-size:12px;
+}
+
+.gray-bar i{
+    font-size: 12px;
+}
+
+.gray-bar .left{
+    width: 350px;
+    height: 40px;
+    line-height: 40px;
+    float:left;
+}
+
+.gray-bar .left li{
+    height: 40px;
+    width: fit-content;
+    float:left;
+    margin-right:15px;
+}
+
+.gray-bar .right{
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    float:right;
+}
+
+.gray-bar .right li{
+    float:right;
+    height: 40px;
+    width: fit-content;
+    margin-left:10px;
+    line-height: 45px;
+}
+
+.gray-bar .right li a{
+    font-size: 12px;
+    color:#757575;
+}
+
+/* 白色条 */
+.white-bar{
+    width: 1024px;
+    height: 132px;
+    margin:0 auto;
+}
+
+.white-bar ul{
+    float:left;
+    height: 132px;
+
+}
+
+.white-bar .white-logo{
+    padding-top:20px;
+    width: 53px;
+    height: 132px;
+    line-height: 132px;
+    text-align: center;
+}
+
+.white-bar .white-logo img{
+    display: inline-block;
+    margin:auto 0;
+    width: 53px;
+    height: 91.23px;
+
+}
+
+.white-bar .nav{
+    width: 550px;
+    height: 132px;
+    margin-left:80px;
+}
+
+.white-bar .nav li{
+    float:left;
+    width: 80px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 12px;
+    margin-top:85px;
+    text-align: center;
+}
+
+.white-bar .nav li a:hover{
+    color:#777777;
+}
+
+.white-bar .nav li a{
+    color: #b2b2b2;
+}
+
+.white-bar .nav .nav-1,
+.white-bar .nav .nav-2,
+.white-bar .nav .nav-3
+{
+    width: 80px;
+    height: 90px;
+    background-color: #fefefe;
+    box-shadow: 0px 0px 4px rgba(0,0,0,0.20);
+    display: none;
+}
+.white-bar .nav div p{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+}
+
+.white-bar .nav div p a{
+    color:#777777;
+}
+.white-bar .nav div p a:hover{
+    color:#000000;
+}
+
+.white-bar .nav .nav-3{
+    height: 60px;
+}
+
+.white-bar .search-container{
+    width: 300px;
+    color:#c20000;
+}
+.search-box {
+    margin-top:70px;
+    padding: 10px;
+    width: 264px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.search-box:focus {
+    outline: none;
+    border-color: #c20000;
+    
+}
+
+.search-label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    color: #7f8c8d;
+}
+
+.header {
+    width: 100%;
+    height: 420px;
+    margin:0 auto;
+    background-image: url(/images/index/header-img.jpg);
+}
+
+/* 美之器物 */
+.outer{
+    width: 100%;
+    height: 850px;
+}
+
+.container{
+    width: 1024px;
+    height:850px;
+    background-color:#ffffff;
+    margin:0 auto;
+    padding-top:30px;
+}
+
+.container .title{
+    height: 70px;
+    text-align: center;
+}
+
+.container .title .big a{
+    font-size: 26px;
+    color:#000;
+    font-family: 宋体;
+}
+.container .title .big span{
+    color: rgb(178, 34, 34);
+}
+.container .title .samll{
+    font-size: 13px;
+    color:#000;
+}
+
+.tab{
+    margin-top:10px;
+    width: 400px;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    margin:0 auto;
+}
+
+
+.tab li{
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    float:left;
+    margin-right:10px;
+    border:1px solid #e2e2e2;
+    font-size: 14px;
+    line-height: 40px;
+}
+
+.tab li a{
+    display: inline-block;
+    width: 80px;
+    height: 40px;
+    color: #494949;
+}
+
+.tab li:hover{
+    border:1px solid #aaaaaa;
+}
+
+.container .box-wrap{
+    width: 1024px;
+    height: 700px;
+    margin:0 auto;
+}
+
+.container .box-wrap ul{
+    width: 240px;
+    height: 310px;
+    float:left;
+    margin:15px 5px;
+}
+.item{
+    display: none;
+}
+
+.item ul .pic{
+    width: 240px;
+    height: 240px;
+    background-position: center;
+}
+.item ul .pic a{
+    display: inline-block;
+
+}
+.item ul .name{
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+.item ul .name a{
+    color:#adb5ca;
+    font-size:14px;
+}
+
+.item ul .price{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 22px;
+    color: #000;
+
+}
+
+.footer{
+    padding-top:30px;
+    width: 100%;
+    height: 300px;
+    background-color: #f2f2f2;
+    margin:0 auto;
+}
+
+.footer .jiamu{
+    width: 47px;
+    height: 82px;
+    margin:0 auto;
+}
+
+.footer .payment{
+    padding-top:30px;
+    width: 1000px;
+    height: 120px;
+    margin:0 auto;
+}
+
+.footer .payment .pay{
+    float:left;
+    width: 330px;
+    height: 80px;
+    text-align: center;
+}
+
+.footer .payment .pay{
+    font-style: 16px;
+    color:#666;
+}
+
+.footer .payment .pay .pay-function a{
+    font-size: 14px;
+    color: #a0a0a0;
+}
+.footer .payment .pay .pay-function a:hover{
+    color:#333333;
+}
+
+.footer .company{
+    width: 1000px;
+    height: 20px;
+    font-style: 13px;
+    color:#a0a0a0;
+    margin:0 auto;
+    text-align: center;
+}

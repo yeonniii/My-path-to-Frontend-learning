@@ -1,0 +1,40 @@
+.banner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-bottom: 5%;
+}
+
+.slide-box {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 500%;
+    /* 每个图片的宽度为20%，总宽度为100% * 图片数量 */
+}
+
+.slide-img {
+    width: 20%;
+    /* 每个图片宽度为20% */
+    height: auto;
+}
+
+.dot-container {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #717171;
+}

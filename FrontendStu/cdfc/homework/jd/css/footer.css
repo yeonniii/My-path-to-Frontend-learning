@@ -1,0 +1,59 @@
+.footer {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-top:10px; 
+    box-sizing: border-box; 
+    
+    border-radius: 8px;
+}
+
+.footer .item{
+    background-color:#ffffff;
+    width: 49%;
+    float:left;
+    margin:0.2%;
+    margin-bottom:5%;
+}
+
+
+.item .pic img{
+    width: 100%;
+    border-radius: 8px;
+}
+
+.item .detail{
+    width: 100%;
+    margin:3%;
+}
+
+.item .price{
+    font-size: 150%;
+    color: #f6392a;
+    margin:3%;
+}
+.item .comments{
+    width: 100%;
+    margin:3%;
+    font-size: 90%;
+    line-height: 100%;
+}
+
+.item .comments p{
+    float:left;
+}
+.item .comments img{
+    justify-content: center;
+    width:50%;
+    
+}
+.item .comments{
+    width: 100%;
+}
+
+.item .comments .similar{
+    margin-left:40%;
+    width: 25%;
+    background-color: #f2f2f2;
+}

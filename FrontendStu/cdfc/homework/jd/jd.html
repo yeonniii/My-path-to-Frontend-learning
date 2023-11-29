@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>京东</title>
+    <link rel="stylesheet" href="https://at.alicdn.com/t/c/font_4327797_zwvxyl1ku5.css">
+    <link rel="stylesheet" href="./css/jd.css">
+    <link rel="stylesheet" href="./css/section.css">
+    <link rel="stylesheet" href="./css/sale.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/banner.css">
+    <script type="text/javascript" src="./js/section.js"></script>
+    <script type="text/javascript" src="./js/sale.js"></script>
+    <script type="text/javascript" src="./js/banner.js"></script>
+
+</head>
+
+<body>
+    <div class="jd-wrapper">
+
+        <div class="header">
+            <div class="nav">
+                <ul class="menu">
+                    <i class="iconfont icon-caidan"></i>
+                </ul>
+                <ul class="search">
+                    <input type="text" placeholder="温奶器">
+                </ul>
+                <ul class="log">
+                    <span>登录</span>
+                </ul>
+
+
+            </div>
+
+            <div class="banner">
+                <div class="slide-box">
+                    <img src="./images/banner1.jpg" alt="" class="slide-img">
+                    <img src="./images/banner2.jpg" alt="" class="slide-img">
+                    <img src="./images/banner3.jpg" alt="" class="slide-img">
+                    <img src="./images/banner4.jpg" alt="" class="slide-img">
+                    <img src="./images/banner5.jpg" alt="" class="slide-img">
+                    <div class="dot-container"></div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="section">
+            <!-- 第一页 -->
+            <div class="sec-pg1">
+                <div class="slider" id="slider1">
+                    <ul class="slide">
+                        <li class="img"><img src="./images/cate1.png" alt=""></li>
+                        <li class="cate">京东超市</li>
+                    </ul>
+                    <ul class="slide">
+                        <li class="img"><img src="./images/cate2.png" alt=""></li>
+                        <li class="cate">京东电器</li>
+                    </ul>
+                    <ul class="slide">
+                        <li class="img"><img src="./images/cate3.png" alt=""></li>
+                        <li class="cate">服饰美妆</li>
+                    </ul>
+                    <ul class="slide">
+                        <li class="img"><img src="./images/cate4.png" alt=""></li>
+                        <li class="cate">京东生鲜</li>
+                    </ul>
+                    <ul class="slide">
+                        <li class="img"><img src="./images/cate5.png" alt=""></li>
+                        <li class="cate">京东到家</li>
+                    </ul>
+                    <ul class="slide">
+                        <li class="img"><img src="./images/cate6.png" alt=""></li>
+                        <li class="cate">充值中心</li>
+                    </ul>
+                    <ul class="slide">
+                        <li class="img"><img src="./images/cate7.png" alt=""></li>
+                        <li class="cate">附近好店</li>
+                    </ul>
+                    <ul class="slide">
+                        <li class="img"><img src="./images/cate8.png" alt=""></li>
+                        <li class="cate">PLUS会员</li>
+                    </ul>
+                    <ul class="slide">
+                        <li class="img"><img src="./images/cate9.png" alt=""></li>
+                        <li class="cate">京东国家</li>
+                    </ul>
+                    <ul class="slide">
+                        <li class="img"><img src="./images/cate10.png" alt=""></li>
+                        <li class="cate">京东拍卖</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 第二页 -->
+            <div class="sec-pg2">
+                <ul class="slide">
+                    <li class="img"><img src="./images/cate11.png" alt=""></li>
+                    <li class="cate">玩3C</li>
+                </ul>
+                <ul class="slide">
+                    <li class="img"><img src="./images/cate12.png" alt=""></li>
+                    <li class="cate">沃尔玛</li>
+                </ul>
+                <ul class="slide">
+                    <li class="img"><img src="./images/cate13.png" alt=""></li>
+                    <li class="cate">美妆馆</li>
+                </ul>
+                <ul class="slide">
+                    <li class="img"><img src="./images/cate14.png" alt=""></li>
+                    <li class="cate">京东旅行</li>
+                </ul>
+                <ul class="slide">
+                    <li class="img"><img src="./images/cate15.png" alt=""></li>
+                    <li class="cate">拍拍二手</li>
+                </ul>
+                <ul class="slide">
+                    <li class="img"><img src="./images/cate16.png" alt=""></li>
+                    <li class="cate">全部</li>
+                </ul>
+            </div>
+
+
+            <div class="indicators">
+                <span class="indicator active" onclick="changePage(1)"></span>
+                <span class="indicator" onclick="changePage(2)"></span>
+            </div>
+
+        </div>
+
+
+
+        <div class="sale">
+            <div class="title">
+                <li class="jd">京东秒杀</li>
+                <li class="red">14点场</li>
+                <ul id="countdown"></ul>
+                <li class="more"><i class="iconfont icon-more"></i></li>
+            </div>
+
+            <div class="lists">
+                <ul>
+                    <div class="pic"><img src="./images/lists1.jpg" alt=""></div>
+                    <div class="text">￥41.82</div>
+                </ul>
+                <ul>
+                    <div class="pic"><img src="./images/lists2.jpg" alt=""></div>
+                    <div class="text">￥1690</div>
+                </ul>
+                <ul>
+                    <div class="pic"><img src="./images/lists3.jpg" alt=""></div>
+                    <div class="text">￥1269</div>
+                </ul>
+                <ul>
+                    <div class="pic"><img src="./images/lists4.jpg" alt=""></div>
+                    <div class="text">￥58</div>
+                </ul>
+                <ul>
+                    <div class="pic"><img src="./images/lists5.jpg" alt=""></div>
+                    <div class="text">￥849</div>
+                </ul>
+                <ul>
+                    <div class="pic"><img src="./images/lists6.jpg" alt=""></div>
+                    <div class="text">￥1329</div>
+                </ul>
+            </div>
+        </div>
+
+
+
+        <div class="footer">
+            <ul class="item">
+                <li class="pic"><img src="./images/footer.webp" alt=""></li>
+                <li class="detail">汉客行李箱男拉杆箱女登机旅行箱14英寸象牙白密码箱镇店之宝再次升级</li>
+                <li class="price">￥349.00</li>
+                <li class="comments">
+                    <p><img src="./images/comments-i.png" alt=""></p>
+                    <p class="similar">看相似</p>
+                </li>
+            </ul>
+            <ul class="item">
+                <li class="pic"><img src="./images/footer.webp" alt=""></li>
+                <li class="detail">汉客行李箱男拉杆箱女登机旅行箱14英寸象牙白密码箱镇店之宝再次升级</li>
+                <li class="price">￥349.00</li>
+                <li class="comments">
+                    <p><img src="./images/comments-i.png" alt=""></p>
+                    <p class="similar">看相似</p>
+                </li>
+            </ul>
+            <ul class="item">
+                <li class="pic"><img src="./images/footer.webp" alt=""></li>
+                <li class="detail">汉客行李箱男拉杆箱女登机旅行箱14英寸象牙白密码箱镇店之宝再次升级</li>
+                <li class="price">￥349.00</li>
+                <li class="comments">
+                    <p><img src="./images/comments-i.png" alt=""></p>
+                    <p class="similar">看相似</p>
+                </li>
+            </ul>
+            <ul class="item">
+                <li class="pic"><img src="./images/footer.webp" alt=""></li>
+                <li class="detail">汉客行李箱男拉杆箱女登机旅行箱14英寸象牙白密码箱镇店之宝再次升级</li>
+                <li class="price">￥349.00</li>
+                <li class="comments">
+                    <p><img src="./images/comments-i.png" alt=""></p>
+                    <p class="similar">看相似</p>
+                </li>
+            </ul>
+           
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+.sale {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding:10px;
+    margin-top:10px; 
+    box-sizing: border-box; 
+    background-color:#ffffff;
+    border-radius: 20px;
+}
+
+.sale .title{
+    width: 100%;
+    height: 25%;
+    margin-bottom:10%;
+}
+
+.sale li,
+.sale ul
+{
+    float:left;
+}
+.sale .jd,
+.sale .red
+{
+    width: 20%;
+}
+
+.sale .red{
+    width: 20%;
+    color:#dc2810;
+}
+#countdown{
+    width: 40%;
+}
+.sale .more
+{
+    width: 20%;
+    color:#dc2810;
+    text-align: right;
+}
+
+#countdown li {
+    background-color: #f43601; 
+    color: #fff; 
+    border-radius: 5px;
+    display: inline-block;
+    margin:0 5px;
+}
+
+.lists{
+    width: 100%;
+}
+
+.lists ul{
+    width: 15%;
+    float:left;
+    margin:0.8%;
+    
+}
+
+
+
+.lists .pic img{
+    width: 100%;
+}
+
+ul .text{
+    font-size: 90%;
+    text-align: center;
+    color:#eb1700;
+    font-weight: bold;
+}

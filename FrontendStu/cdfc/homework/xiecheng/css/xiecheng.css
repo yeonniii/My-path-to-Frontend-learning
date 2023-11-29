@@ -1,0 +1,433 @@
+*{
+    padding:0;
+    margin:0;
+    text-decoration: none;
+    list-style:none;
+}
+
+body{
+    background-color: #f4f4f4;
+}
+
+
+/* 搜索框 */
+.search-box{
+    width: 100%;
+}
+
+.search-box .search{
+    width: 99%;
+    border:2px solid #87c6fc;
+    border-radius: 10px;
+    
+}
+
+.search-box .search span{
+    color:#828282;
+}
+
+.nav-box{
+    width: 100%;
+    display:flex;
+    flex-direction:row;
+    margin-top:5%;
+}
+
+.nav-box .nav-list{
+    width: 100%;
+    justify-content: space-around;
+    display:flex;
+    flex-direction:column;
+    
+}
+
+.nav-box .nav-list li{
+    width: 100%;
+    font-size: 12px;
+    line-height: 30px;
+    text-align: center;
+    font-display: flex;
+    justify-content: space-around;
+    
+}
+.nav-box .nav-list li a{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-box .nav-list .hotel-main .bg,
+.nav-box .nav-list .hotel-sub .bg
+{
+    background-image: url(/images/bg1.png);
+    color:#fff;
+    width: 28px;
+    height: 28px;
+    margin-bottom: 4px;
+    background-size: 28px auto;
+    background-repeat: no-repeat;
+}
+.nav-box .nav-list .flight-main .bg,
+.nav-box .nav-list .flight-sub .bg
+{
+    background-image: url(/images/bg2.png);
+    color:#fff;
+    width: 28px;
+    height: 28px;
+    margin-bottom: 4px;
+    background-size: 28px auto;
+    background-repeat: no-repeat;
+}
+.nav-box .nav-list .train-main .bg,
+.nav-box .nav-list .train-sub .bg
+{
+    background-image: url(/images/bg3.png);
+    color:#fff;
+    width: 28px;
+    height: 28px;
+    margin-bottom: 4px;
+    background-size: 28px auto;
+    background-repeat: no-repeat;
+}
+.nav-box .nav-list .travel-main .bg,
+.nav-box .nav-list .travel-sub .bg
+{
+    background-image: url(/images/bg4.png);
+    color:#fff;
+    width: 28px;
+    height: 28px;
+    margin-bottom: 4px;
+    background-size: 28px auto;
+    background-repeat: no-repeat;
+}
+.nav-box .nav-list .view-main .bg,
+.nav-box .nav-list .view-sub .bg
+{
+    background-image: url(/images/bg5.png);
+    color:#fff;
+    width: 28px;
+    height: 28px;
+    margin-bottom: 4px;
+    background-size: 28px auto;
+    background-repeat: no-repeat;
+}
+
+.nav-box .nav-list li a:nth-child(2){
+    color:#fff
+}
+
+.nav-box .nav-list:first-child{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.nav-box .nav-list .nav-hotel{
+    background-color: #f47c41;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.nav-box .nav-list .nav-flight{
+    background-color: #50a9fd;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.nav-box .nav-list .nav-train{
+    background-color: #639cff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.nav-box .nav-list .nav-travel{
+    background-color: #62d4b6;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.nav-box .nav-list .nav-view{
+    background-color: #f99121;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.nav-box .nav-list .hotel-sub{
+    width: 100%;
+    background-color: #fef5f1;
+}
+.nav-box .nav-list .flight-sub{
+    width: 100%;
+    background-color: #f0f9ff;
+}
+.nav-box .nav-list .train-sub{
+    width: 100%;
+    background-color: #f2f5ff;
+}
+.nav-box .nav-list .travel-sub{
+    width: 100%;
+    background-color: #edfcf8;
+}
+.nav-box .nav-list .view-sub{
+    width: 100%;
+    background-color: #fff9f2;
+}
+
+.nav-box .nav-list .hotel-main a,
+.nav-box .nav-list .flight-main a,
+.nav-box .nav-list .travel-main a,
+.nav-box .nav-list .train-main a,
+.nav-box .nav-list .view-main a
+{
+    color:#fff;
+}
+.nav-box .nav-list .hotel-sub a,
+.nav-box .nav-list .flight-sub a,
+.nav-box .nav-list .travel-sub a,
+.nav-box .nav-list .train-sub a,
+.nav-box .nav-list .view-sub a
+{
+    color:#333;
+}
+
+
+
+
+.nav-box .nav-list li{
+    flex-direction:column;
+}
+
+.nav-box .nav-list li i,
+.nav-box .nav-list li span{
+    justify-content: center;
+}
+
+/* 榜单 */
+.sub-banner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #f4f4f4;
+    /* padding: 0 12px; */
+    margin-top:10%;
+    margin-left: -8px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.sub-banner .banner {
+    position: relative;
+    flex: 1;
+    width: 50%;
+    padding: 8px;
+    margin-left: 8px;
+    border-radius: 8px;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.sub-banner .banner .banner-header{
+        display: flex;
+        height: 20px;
+        margin-bottom: 6px;
+        justify-content: space-between;
+        align-items: center;
+}
+.sub-banner .banner .banner-header a{
+width: 55%;
+}
+.sub-banner .banner .banner-header a img{
+    width: 70%;
+}
+.sub-banner .banner .banner-header div{
+    width: 45%;
+    font-size: 60%;
+    background-color: #feeae2;
+    color:#f73d00;
+    text-align: center;
+    border-radius: 10%;
+}
+
+.sub-banner .banner.slider {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    overflow: hidden;
+}
+.sub-banner .banner .shanghai{
+    display: flex;
+    flex-direction:row;
+    position: relative;
+}
+.sub-banner .banner .shanghai img{
+    width: 100%;
+    padding:0.5%;
+    flex-direction:row;
+    overflow: hidden;
+    border-radius: 10%;
+}
+
+.sub-banner .banner .shanghai .tag1{
+    position: absolute;
+    background-color: #e1bf87;
+    border-top-left-radius: 20%;
+    font-size:14px;
+}
+.sub-banner .banner .shanghai .tag2{
+    position: absolute;
+    left:50%;
+    background-color: #e1bf87;
+    border-top-left-radius: 20%;
+    font-size:14px;
+}
+
+/* 轮播图样式 */
+.slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide {
+    display: inline-block;
+    white-space: nowrap;
+    transition: transform 0.5s ease;
+}
+
+/* 图片样式 */
+.slider a img {
+    width: 100%;
+}
+
+/* 价格标签样式 */
+.slide a span {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+    border-radius: 5px;
+    color: #f98c47;
+}
+
+
+/* 广告栏 */
+.ad{
+    width: 95%;
+    background-color: #f4f4f4;
+    margin-top:3%
+    
+}
+.ad img{
+    width:100%;
+    border-radius: 10px;
+}
+
+/* 工具栏 */
+.tool-box{
+    margin-top:5%;
+    width: 100%;
+    background-color: #f4f4f4;
+}
+
+.tool-box .tool-group{
+    display:flex;
+    justify-content:space-around;
+    margin-bottom:10%;
+    flex-direction: row;
+}
+
+.tool-box .tool-group a{
+    width: 20%;
+    color:#333;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #999999;
+    border-radius: 4px;
+    min-width: 100px;
+    text-align: center;
+}
+
+.toolbox .tool-ver {
+    text-align: center;
+    font-size: 12px;
+    line-height: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.tool-box .tool-ver a {
+    width: 18%;
+    font-size:10px ;
+    display:inline-block;
+    margin-left:24%;
+    color: #666666;
+}
+
+.tool-box .tool-ver p {
+    margin-top: 16px;
+    font-size: 10px;
+    color: #666666;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 12px;
+}
+
+/* 底部固定菜单栏样式 */
+.tabber {
+    min-width: 320px;
+    max-width: 540px;
+    width: 100%;
+    display: flex;
+    z-index: 999;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff; /* 背景颜色 */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px; 
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1); /* 底部阴影效果 */
+  }
+  /* 索引项样式 */
+  .tabber a {
+    width: 100%;
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* 图标样式 */
+  .tabber i {
+    font-size: 24px;
+    color: #333; /* 设置默认颜色 */
+  }
+
+  /* 文字样式 */
+  .tabber .text {
+    font-size: 12px;
+    margin-top: 3px;
+  }
+
+  /* 添加选中状态样式 */
+  .tabber a.active i {
+    color: #2698fa; /* 设置选中颜色 */
+  }
+  /* 添加padding-bottom，避免底部菜单遮盖内容 */
+body {
+    padding-bottom: 1%; /* tabber的高度 */
+  }
